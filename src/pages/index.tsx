@@ -21,7 +21,7 @@ export default function Home() {
         <Navbar />
         <section className={styles.section__home}>
           <div className={styles.container}>
-            <h1 className='text-main_heading font-bold tracking-widest'>
+            <h1 className='text-main_heading font-extrabold tracking-widest text-secondaryLight'>
               I'm Martin Dorzdik
             </h1>
             <Paragraph>
@@ -36,7 +36,7 @@ export default function Home() {
             </Paragraph>
             <button>
               <Link href='/about' className='flex items-center text-2xl text-gray-500'>
-                Learn More About 
+                Learn More About Me
                 <AiOutlineArrowRight className={styles.arrow}/>
               </Link>
             </button>

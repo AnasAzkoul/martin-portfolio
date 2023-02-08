@@ -16,7 +16,7 @@
 }
 
 .arrow {
-  @apply ml-4 text-4xl; 
+  @apply ml-4 text-4xl text-secondaryLight; 
   animation: arrow 1.5s linear infinite;
 }
 
