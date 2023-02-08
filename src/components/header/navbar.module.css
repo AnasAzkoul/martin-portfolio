@@ -1,0 +1,19 @@
+.navigation {
+  @apply py-4 px-6
+}
+
+
+
+.container{
+  @apply flex justify-between items-center mx-auto py-20 px-8; 
+  max-width: 114rem; 
+}
+
+.logo { 
+  @apply text-main_logo font-bold cursor-pointer; 
+}
+
+.links {
+  @apply flex gap-10 text-2xl capitalize text-gray-500; 
+  @apply cursor-pointer; 
+}
