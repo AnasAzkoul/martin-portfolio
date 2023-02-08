@@ -4,16 +4,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#F9F7F6',
+        primary: '#EFE9E7',
         secondary: '#014656',
         secondaryLight: '#00A2AD',
         mustard: '#FDD65D',
         orange: '#F6A801',
       },
       fontSize: {
-        main_logo: 'clamp(1.6rem, 2vw, 2rem)', 
-        main_heading: 'clamp(4.8rem, 4vw, 4.2rem)', 
-      }
+        main_logo: 'clamp(1.6rem, 2vw, 2rem)',
+        main_heading: 'clamp(4.8rem, 4vw, 4.2rem)',
+      },
+      keyframes: {
+        fadeFromLeft: {
+          '0%': { opacity: '0', transform: 'translateX(-50px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        fadeFromLeft: 'fadeFromLeft 2s ease-in-out',
+      },
     },
   },
   plugins: [],

@@ -9,10 +9,8 @@
 }
 
 .container::before {
-  @apply text-8xl font-extrabold -top-14 left-10 text-secondaryLight/20 z-[-1]; 
+  @apply absolute text-main_heading font-extrabold -top-14 left-10 text-secondaryLight/20 z-[-1]; 
   content: 'Hello, there'; 
-  position: absolute; 
-
 }
 
 .arrow {

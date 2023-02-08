@@ -24,16 +24,18 @@ export default function Home() {
             <h1 className='text-main_heading font-extrabold tracking-widest text-secondaryLight'>
               I'm Martin Dorzdik
             </h1>
-            <Paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              numquam quibusdam corrupti non quidem sit earum saepe nihil
-              ratione facilis!
-            </Paragraph>
-            <Paragraph>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-              numquam quibusdam corrupti non quidem sit earum saepe nihil
-              ratione facilis!
-            </Paragraph>
+            <div className='w-4/5'>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                numquam quibusdam corrupti non quidem sit earum saepe nihil
+                ratione facilis!
+              </Paragraph>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                numquam quibusdam corrupti non quidem sit earum saepe nihil
+                ratione facilis!
+              </Paragraph>
+            </div>
             <button>
               <Link href='/about' className='flex items-center text-2xl text-gray-500'>
                 Learn More About Me
