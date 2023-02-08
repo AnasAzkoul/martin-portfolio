@@ -12,7 +12,7 @@ module.exports = {
       },
       fontSize: {
         main_logo: 'clamp(1.6rem, 2vw, 2rem)',
-        main_heading: 'clamp(4.8rem, 4vw, 4.2rem)',
+        main_heading: 'clamp(4.8rem, 3vw, 4rem)',
       },
       keyframes: {
         fadeFromLeft: {

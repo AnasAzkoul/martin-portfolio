@@ -1,6 +1,7 @@
 import React from 'react'; 
 import Link from 'next/link';
 import {navLinks} from '../../utils/constants'; 
+import { RxHamburgerMenu } from 'react-icons/rx'; 
 import styles from './navbar.module.css'; 
 
 const Navbar = () => {
@@ -20,6 +21,9 @@ const Navbar = () => {
               );
             })}
           </ul>
+          <button className='md:hidden'>
+            <RxHamburgerMenu size={20}/>
+          </button>
         </div>
       </nav>
     </header>

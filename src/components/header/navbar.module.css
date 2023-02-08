@@ -12,6 +12,6 @@
 }
 
 .links {
-  @apply flex gap-16 text-2xl capitalize text-gray-500; 
+  @apply hidden md:flex gap-16 text-2xl capitalize text-gray-500; 
   @apply cursor-pointer; 
 }

@@ -24,7 +24,7 @@ export default function Home() {
             <h1 className='text-main_heading font-extrabold tracking-widest text-secondaryLight'>
               I'm Martin Dorzdik
             </h1>
-            <div className='w-4/5'>
+            <div className='md:w-4/5'>
               <Paragraph>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
                 numquam quibusdam corrupti non quidem sit earum saepe nihil
