@@ -1,5 +1,5 @@
 .section__home{
-  @apply mx-auto h-screen; 
+  @apply mx-auto; 
   max-width: 114rem;
 }
 

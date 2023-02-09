@@ -1,10 +1,16 @@
-import React from 'react'; 
+import React, {useState} from 'react'; 
 import Link from 'next/link';
-import {navLinks} from '../../utils/constants'; 
+import NavLinks from './NavLinks';
 import { RxHamburgerMenu } from 'react-icons/rx'; 
 import styles from './navbar.module.css'; 
 
-const Navbar = () => {
+type Props = {
+  openSidebar: () => void
+}
+
+
+const Navbar = ({openSidebar}: Props) => {
+
   return (
     <header>
       <nav className={styles.navigation}>
@@ -12,19 +18,12 @@ const Navbar = () => {
           <div className={`${styles.logo} animate-fadeFromLeft`}>
             <Link href='/'>MD.</Link>
           </div>
-          <ul className={styles.links}>
-            {navLinks.map((link) => {
-              return (
-                <li key={link.id}>
-                  <Link href={link.url}>{link.text}</Link>
-                </li>
-              );
-            })}
-          </ul>
-          <button className='md:hidden'>
+          <NavLinks />
+          <button className='md:hidden' onClick={openSidebar}>
             <RxHamburgerMenu size={20}/>
           </button>
         </div>
+        
       </nav>
     </header>
   );

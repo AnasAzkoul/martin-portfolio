@@ -15,3 +15,11 @@
   @apply hidden md:flex gap-16 text-2xl capitalize text-gray-500; 
   @apply cursor-pointer; 
 }
+
+.links_mobile {
+  @apply flex flex-col items-baseline  gap-16
+}
+
+.sidebar {
+  @apply absolute top-0 z-50 h-screen w-screen flex flex-col items-center bg-primary transition-all ease-in duration-300
+}
