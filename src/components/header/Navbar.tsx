@@ -1,16 +1,12 @@
-import React, {useState} from 'react'; 
+import React, {useContext} from 'react'; 
+import { uiContext } from '@/context/UIContext';
 import Link from 'next/link';
 import NavLinks from './NavLinks';
 import { RxHamburgerMenu } from 'react-icons/rx'; 
 import styles from './navbar.module.css'; 
 
-type Props = {
-  openSidebar: () => void
-}
-
-
-const Navbar = ({openSidebar}: Props) => {
-
+const Navbar = () => {
+  const {openSidebar} = useContext(uiContext); 
   return (
     <header>
       <nav className={styles.navigation}>

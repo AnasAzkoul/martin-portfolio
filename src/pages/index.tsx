@@ -1,4 +1,3 @@
-import { useState } from 'react'; 
 import Navbar from '@/components/header/Navbar';
 import Paragraph from '@/components/paragraph';
 import Link from 'next/link';
@@ -12,15 +11,6 @@ import Sidebar from '@/components/header/Sidebar';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
-    
-  const openSidebar = () => {
-    setIsSidebarOpen(true); 
-  }
-  
-  const closeSidebar = () => {
-    setIsSidebarOpen(false); 
-  }
   return (
     <>
       <Head>
@@ -29,8 +19,8 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <main className='relative overflow-x-hidden'>
-        <Navbar openSidebar={openSidebar} />
-        <Sidebar sidebar={isSidebarOpen} closeSidebar={closeSidebar} />
+        <Navbar />
+        <Sidebar/>
         <section className={styles.section__home}>
           <div className={styles.container}>
             <h1 className='text-main_heading font-extrabold tracking-widest text-secondaryLight'>
