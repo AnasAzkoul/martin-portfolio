@@ -2,12 +2,16 @@ import React from 'react';
 import Navbar from '../header/Navbar';
 import Sidebar from '../header/Sidebar';
 
-type Props = {}
+type Props = {
+  children: React.ReactNode
+}
 
-const Layout = (props: Props) => {
+const Layout = ({children}: Props) => {
   return (
     <>
-
+      <Sidebar />
+      <Navbar />
+      {children}
     </>
   )
 }

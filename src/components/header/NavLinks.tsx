@@ -15,7 +15,7 @@ const NavLinks = ({type}: Props) => {
       {navLinks.map((link) => {
         return (
           <li key={link.id}>
-            <Link href={link.url}>{link.text}</Link>
+            <Link href={link.url} className='w-full'>{link.text}</Link>
           </li>
         );
       })}

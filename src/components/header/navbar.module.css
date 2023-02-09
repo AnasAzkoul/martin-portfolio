@@ -3,7 +3,7 @@
 }
 
 .container{
-  @apply flex justify-between items-center mx-auto py-20 px-8; 
+  @apply flex justify-between items-center mx-auto py-20 px-4 md:py-8; 
   max-width: 114rem; 
 }
 
@@ -17,7 +17,7 @@
 }
 
 .links_mobile {
-  @apply flex flex-col items-baseline  gap-16
+  @apply flex flex-col items-center gap-16 w-1/2
 }
 
 .sidebar {

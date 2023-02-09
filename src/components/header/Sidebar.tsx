@@ -1,8 +1,9 @@
 import React, {useContext} from 'react';
-import { uiContext } from '@/context/UIContext';
-import styles from './navbar.module.css'; 
+import {uiContext} from '@/context/UIContext';
+import Logo from './Logo';
 import NavLinks from './NavLinks';
 import {AiOutlineClose} from 'react-icons/ai'; 
+import styles from './navbar.module.css'; 
 
 type Props = {
 
@@ -17,9 +18,10 @@ const Sidebar = ({}: Props) => {
         isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <div className='py-20 px-8 flex justify-end w-full'>
+      <div className='py-20 px-10 flex justify-between w-full'>
+        <Logo />
         <button onClick={closeSidebar}>
-          <AiOutlineClose />
+          <AiOutlineClose size={20}/>
         </button>
       </div>
       <NavLinks type='mobile' />

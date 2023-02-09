@@ -5,14 +5,15 @@ module.exports = {
     extend: {
       colors: {
         primary: '#EFE9E7',
-        secondary: '#014656',
+        secondary: '#017482',
         secondaryLight: '#00A2AD',
         mustard: '#FDD65D',
         orange: '#F6A801',
       },
       fontSize: {
-        main_logo: 'clamp(1.6rem, 2vw, 2rem)',
-        main_heading: 'clamp(4.8rem, 3vw, 4rem)',
+        main_heading: 'clamp(4rem, 2.5vw, 3.5rem)',
+        main_hello: 'clamp(4.8rem, 3vw, 3.7rem)',
+        main_logo: 'clamp(1.8rem, 2vw, 2rem)',
       },
       keyframes: {
         fadeFromLeft: {
