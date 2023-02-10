@@ -1,0 +1,13 @@
+.container {
+  @apply mx-auto; 
+  max-width: 83%;
+}
+
+.publications {
+  @apply px-8 md:w-4/5; 
+}
+
+.publication {
+  @apply flex items-center py-4 px-2 hover:bg-secondaryLight hover:text-primary rounded-md transition-all duration-100 ease-linear; 
+  @apply text-xl text-gray-500; 
+}
