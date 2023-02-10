@@ -61,3 +61,31 @@ export const socialLinks: SocialLinkTypes[] = [
     name: 'email'
   }, 
 ]
+
+
+export const publicationsData = [
+  {
+    id: 1,
+    title:
+      'An Analysis of Differential Evolution Parameters on Rotated Bi-objective Optimization Functions',
+    href: '/publications/An Analysis of Differential Evolution Parameters on Rotated Bi-objective Optimization Functions.pdf',
+  },
+  {
+    id: 2,
+    title:
+      'Computational Cost Reduction of Non-dominated Sorting Using the M-front',
+    href: '/publications/Computational Cost Reduction of Non-dominated Sorting Using the M-front.pdf',
+  },
+  {
+    id: 3,
+    title:
+      'Attempt to Reduce the Computational Complexity in Multi-objective Differential Evolution Algorithms',
+    href: '/publications/Attempt to Reduce the Computational Complexity in Multi-objective Differential Evolution Algorithms.pdf',
+  },
+  {
+    id: 4,
+    title:
+      'Comparison of Parameter Control Mechanisms in Multi-objective Differential Evolution',
+    href: '/publications/Comparison of Parameter Control Mechanisms in Multi-objective Differential Evolution.pdf',
+  },
+];

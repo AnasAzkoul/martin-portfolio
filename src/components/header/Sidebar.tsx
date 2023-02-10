@@ -5,11 +5,7 @@ import NavLinks from './NavLinks';
 import {AiOutlineClose} from 'react-icons/ai'; 
 import styles from './navbar.module.css'; 
 
-type Props = {
-
-}
-
-const Sidebar = ({}: Props) => {
+const Sidebar = () => {
   const {isSidebarOpen, closeSidebar} = useContext(uiContext); 
 
   return (
