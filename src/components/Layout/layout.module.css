@@ -1,0 +1,4 @@
+.section {
+    @apply mx-auto mt-56 md:mt-80; 
+  max-width: 114rem;
+}

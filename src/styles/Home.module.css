@@ -1,26 +1,18 @@
-.section__home{
-  @apply mx-auto mt-56 md:mt-80; 
-  max-width: 114rem;
-}
-
 .container {
-  @apply mx-auto mt-28 relative; 
+  @apply mx-auto mt-28; 
   max-width: 83%;
 }
 
-/* .container::before {
-  @apply absolute text-main_heading font-extrabold -top-14 left-10 text-secondaryLight/20 z-[-1]; 
-  content: 'Hello, there'; 
-} */
+
+.social_links_container {
+  @apply mt-16
+}
 
 .arrow {
   @apply ml-4 text-4xl text-secondaryLight; 
   animation: arrow 1.5s linear infinite;
 }
 
-.social_links_container {
-  @apply mt-16
-}
 
 @keyframes arrow {
   0% {
