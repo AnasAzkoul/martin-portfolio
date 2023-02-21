@@ -12,3 +12,22 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
+
+.section {
+  @apply mx-auto ; 
+  max-width: 114rem;
+}
+
+.section:not(:last-child) {
+  @apply mt-56 md:mt-80; 
+}
+
+.section:last-child {
+  @apply md:mt-20
+}
+
+#canvas {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+}

@@ -19,7 +19,7 @@ const Layout = ({ children }: Props) => {
       <main className='relative overflow-x-hidden'>
         <Sidebar />
         <Navbar />
-        <section className={styles.section}>{children}</section>
+        {children}
       </main>
     </>
   );

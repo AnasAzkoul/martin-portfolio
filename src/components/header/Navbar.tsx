@@ -9,7 +9,7 @@ import styles from './navbar.module.css';
 const Navbar = () => {
   const {openSidebar} = useContext(uiContext); 
   return (
-    <header className='fixed w-full'>
+    <header className='fixed w-full bg-primary'>
       <nav className={styles.navigation}>
         <div className={styles.container}>
           <Logo />

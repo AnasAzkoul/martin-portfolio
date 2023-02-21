@@ -1,7 +1,6 @@
 import Layout from '@/components/Layout/Layout';
 import Paragraph from '@/components/paragraph';
 import Link from 'next/link';
-import Head from 'next/head';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
