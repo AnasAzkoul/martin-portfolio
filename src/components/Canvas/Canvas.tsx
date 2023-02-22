@@ -1,38 +1,22 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { resetCities } from '@/lib/optimization/cities';
-import Path from '@/lib/optimization/path';
-import {City} from '../../lib/optimization/city';
-import { useCanvas } from '@/lib/hooks/useCanvas';
+import React, { useEffect, useState } from 'react';
+import {useCanvas} from '@/lib/hooks/useCanvas';
 import styles from './canvas.module.css';
 
 type Props = {};
 
 const Canvas = (props: Props) => {
-  const {canvasRef, onClickHandler} = useCanvas(); 
+  const {canvasRef, onClickHandler, onClearButton} = useCanvas(); 
   
-  return <canvas ref={canvasRef} className={styles.canvas} id='canvas' onClick={(e) => onClickHandler(e)} />;
+  return (
+    <div className='relative'>
+      <canvas ref={canvasRef} className={styles.canvas} id='canvas' onClick={(e) => onClickHandler(e)} />
+      <div className='flex justify-end px-10'>
+        <button
+          onClick={() => onClearButton()}
+          className='absolute bottom-5 px-4 py-2 border border-red-700 rounded-xl text-primary text-2xl bg-red-600 font-semibold'>Clear Path</button>
+      </div>
+    </div>
+  );
 };
 
 export default Canvas;
-
-// const clear = () => {
-//   if (!context || !canvasRef.current) return;
-//   context.clearRect(
-//     0,
-//     0,
-//     canvasRef.current.width,
-//     canvasRef.current.height
-//   );
-// };
-
-// const drawBackgroundImage = () => {
-//   // if (!image) return;
-//   const scale = width / backgroundImage.width;
-//   context?.drawImage(
-//     backgroundImage,
-//     0,
-//     0,
-//     backgroundImage.width * scale,
-//     backgroundImage.height * scale
-//   );
-// };

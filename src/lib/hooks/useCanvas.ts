@@ -3,15 +3,15 @@ import {resetCities} from '../optimization/cities';
 import Path from '../optimization/path';
 import {City} from '../optimization/city';
 import {useResizeWindow} from './useResizeWindow';
-import {render, getClickedCity, getCanvasCoordinates} from '../helpers/canvasHelpers'; 
+import {render, getClickedCity, getCanvasCoordinates, clear} from '../helpers/canvasHelpers'; 
 
 export const useCanvas = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [mapCanvas, setMapCanvas] = useState<HTMLCanvasElement | null>(null);
   const [canvasContext, setCanvasContext] = useState<CanvasRenderingContext2D | null>(null);
   const [mapCities, setMapCities] = useState<City[]>(resetCities());
-  const path = new Path(mapCities!);
-  const {width, height} = useResizeWindow()
+  const {width, height} = useResizeWindow(); 
+  let path = new Path(mapCities!, canvasContext);
 
   const onClickHandler = (
     e: React.MouseEvent<HTMLCanvasElement, MouseEvent>
@@ -22,7 +22,18 @@ export const useCanvas = () => {
     if (clicked !== -1) {
       path.cityClicked(clicked);
     }
-    render(canvasContext, mapCities, path);
+    clear(canvasContext, mapCanvas); 
+    render(canvasContext, mapCities, path, mapCanvas);
+  };
+  
+  const onClearButton = () => {
+    // const newCities = resetCities();
+    // setMapCities(newCities);
+    path = new Path(mapCities!, canvasContext);
+    console.log(path.indices); 
+    path.colorCities(); 
+    clear(canvasContext, mapCanvas); 
+    render(canvasContext, mapCities, path, mapCanvas);
   };
 
   useEffect(() => {
@@ -47,12 +58,17 @@ export const useCanvas = () => {
     canvas.style.backgroundPosition = 'center center';
     canvas.style.backgroundSize = 'cover';
 
-    render(canvasContext, mapCities, path);
+    render(canvasContext, mapCities, path, mapCanvas);
 
   }, [canvasRef, mapCanvas]);
   
+  useEffect(() => {
+    
+  }, [onClearButton]); 
+    
   return {
     canvasRef, 
     onClickHandler, 
+    onClearButton
   }
 }

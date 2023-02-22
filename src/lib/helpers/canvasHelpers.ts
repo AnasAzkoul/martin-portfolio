@@ -1,20 +1,33 @@
 import {City} from '../optimization/city';
 import Path from '../optimization/path';
 
-export const render = (canvasContext: CanvasRenderingContext2D | null, mapCities: City[], path: Path) => {
-  if (!canvasContext) return;
-  path.draw(canvasContext);
+export const clear = (canvasContext: CanvasRenderingContext2D | null, canvas: HTMLCanvasElement | null) => {
+  canvasContext?.clearRect(0, 0, canvas?.width!, canvas?.height!)
+}
+
+export const render = (canvasContext: CanvasRenderingContext2D | null, mapCities: City[], path: Path, canvas: HTMLCanvasElement | null) => {
+  if (!canvasContext || !path) return;
+  clear(canvasContext, canvas)
+  path.draw();
   
   mapCities?.forEach((city) => {
     city.render(canvasContext);
   });
 
   canvasContext.fillStyle = City.colors.NORMAL;
+  canvasContext.font = 'bold 28px Arial';
+  canvasContext.textBaseline = 'bottom';
+  canvasContext.textAlign = 'start';
+  var rounded = Math.round(path.value * 100) / 100;
+  canvasContext.fillText(
+    'Length: ' + rounded.toString() + '  miles',
+    10,
+    canvas?.height! - 10
+  );
 };
 
 export const getClickedCity = (coordinates: { x: number; y: number }, mapCities: City[]) => {
   for (let i = 0; i < mapCities.length; i++) {
-    console.log(mapCities[i].distanceTo(coordinates) <= 16);
     if (mapCities[i].distanceTo(coordinates) <= 16) {
       return i;
     }

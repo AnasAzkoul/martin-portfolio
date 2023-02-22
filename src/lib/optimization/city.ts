@@ -32,6 +32,10 @@ export class City {
     FIRST: '#AA8C39',
     LAST: '#AA5439',
   };
+  
+  setStatus(value: Status) {
+    this.status = value; 
+  }
 
   render(context: CanvasRenderingContext2D | null) {
     if (!context) return;

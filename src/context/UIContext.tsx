@@ -1,4 +1,4 @@
-import React, {useState} from 'react'; 
+import React, {useState, createContext} from 'react'; 
 
 type Props = {
   children: React.ReactNode
@@ -10,7 +10,7 @@ const initialVale = {
   closeSidebar: () => {}, 
 };
 
-export const uiContext = React.createContext(initialVale); 
+export const uiContext = createContext(initialVale); 
 
 const UiProvider = ({children}: Props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
