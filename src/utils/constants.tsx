@@ -27,37 +27,37 @@ type SocialLinkTypes = {
 export const socialLinks: SocialLinkTypes[] = [
   {
     id: 1,
-    icon: <BsStackOverflow className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <BsStackOverflow className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Stack Overflow'
   }, 
   {
     id: 2,
-    icon: <IoLogoBitbucket className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <IoLogoBitbucket className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Bit Bucket'
   }, 
   {
     id: 3,
-    icon: <SiResearchgate className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <SiResearchgate className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Research Gate'
   }, 
   {
     id: 4,
-    icon: <AiFillGithub className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <AiFillGithub className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Github'
   }, 
   {
     id: 5,
-    icon: <AiOutlineLinkedin className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <AiOutlineLinkedin className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Linkedin'
   }, 
   {
     id: 6,
-    icon: <FiTwitter className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <FiTwitter className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'Twitter'
   }, 
   {
     id: 7,
-    icon: <AiOutlineMail className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-4xl'/>,
+    icon: <AiOutlineMail className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
     name: 'email'
   }, 
 ]

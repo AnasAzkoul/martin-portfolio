@@ -11,8 +11,8 @@ module.exports = {
         orange: '#F6A801',
       },
       fontSize: {
-        main_heading: 'clamp(4rem, 2.5vw, 3.5rem)',
-        main_hello: 'clamp(4.8rem, 3vw, 3.7rem)',
+        main_heading: 'clamp(2.5rem, 1.5vw, 2.8rem)',
+        main_hello: 'clamp(3rem, 2vw, 2.8rem)',
         main_logo: 'clamp(1.8rem, 2vw, 2rem)',
       },
       keyframes: {

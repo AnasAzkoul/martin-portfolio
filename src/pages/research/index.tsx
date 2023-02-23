@@ -14,7 +14,7 @@ const research = () => {
         <section className='section'>
           <div className={styles.container}>
             <SectionTitle>My Publications</SectionTitle>
-            <div className='md:w-4/5'>
+            <div className='md:w-8/12'>
               <Paragraph>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
                 aspernatur accusamus nemo molestias fuga et at quae mollitia
@@ -40,12 +40,12 @@ const research = () => {
             </ul>
           </div>
         </section>
-        <section className='section mb-20'>
+        {/* <section className='mx-auto max-w-7xl my-20'>
           <div className={`${styles.container} bg-secondaryLight`}>
             <SectionTitle>My Research</SectionTitle>
             <Canvas />
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   );

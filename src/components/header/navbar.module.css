@@ -3,16 +3,16 @@
 }
 
 .container{
-  @apply flex justify-between items-center mx-auto py-20 px-4 md:py-8; 
+  @apply flex justify-between items-center mx-auto py-10 px-4 md:py-6; 
   max-width: 114rem; 
 }
 
 .logo { 
-  @apply text-main_logo font-bold cursor-pointer; 
+  @apply text-xl font-bold cursor-pointer; 
 }
 
 .links {
-  @apply hidden md:flex gap-16 text-2xl capitalize text-gray-500; 
+  @apply hidden md:flex gap-16 text-base capitalize text-gray-500; 
   @apply cursor-pointer; 
 }
 

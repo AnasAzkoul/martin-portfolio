@@ -3,9 +3,8 @@
   max-width: 83%;
 }
 
-
 .social_links_container {
-  @apply mt-16
+  @apply mt-16 mb-10
 }
 
 .arrow {

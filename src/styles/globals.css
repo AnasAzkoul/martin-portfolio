@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 body {
@@ -14,20 +14,10 @@ body {
 }
 
 .section {
-  @apply mx-auto ; 
-  max-width: 114rem;
-}
-
-.section:not(:last-child) {
-  @apply mt-56 md:mt-80; 
-}
-
-.section:last-child {
-  @apply md:mt-20
+  @apply mx-auto mt-32 max-w-[114rem]; 
 }
 
 #canvas {
   width: 100%;
   height: auto;
-  border: 2px solid black;
 }

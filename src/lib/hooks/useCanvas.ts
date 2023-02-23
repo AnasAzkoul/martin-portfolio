@@ -27,8 +27,6 @@ export const useCanvas = () => {
   };
   
   const onClearButton = () => {
-    // const newCities = resetCities();
-    // setMapCities(newCities);
     path = new Path(mapCities!, canvasContext);
     console.log(path.indices); 
     path.colorCities(); 

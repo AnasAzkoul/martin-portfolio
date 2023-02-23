@@ -6,7 +6,7 @@ type Props = {
 
 const Paragraph = ({children}: Props) => {
   return ( 
-    <p className='text-2xl text-gray-500 my-8 tracking-normal leading-9'>{children}</p>  
+    <p className='text-base text-gray-500 my-6 tracking-normal leading-9'>{children}</p>  
   )
 }
 
