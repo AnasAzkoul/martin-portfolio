@@ -14,7 +14,7 @@ body {
 }
 
 .section {
-  @apply mx-auto mt-32 max-w-[114rem]; 
+  @apply mx-auto mt-40 max-w-[114rem]; 
 }
 
 #canvas {
