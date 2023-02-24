@@ -1,54 +1,43 @@
 import React, { useRef, useEffect } from 'react';
 import Layout from '@/components/Layout/Layout';
-import SectionTitle from '@/components/SectionTitle';
-import Paragraph from '@/components/paragraph';
-import Canvas from '@/components/Canvas/Canvas';
-import { publicationsData } from '@/utils/constants';
-import { CgChevronRight } from 'react-icons/cg';
-import styles from '../../styles/Research.module.css';
+import Publications from '@/components/publications/Publications';
+import Articles from '@/components/Articles/Articles';
+import { getAllArticles } from '@/lib/helpers/getArticles';
+// import styles from '../../styles/Research.module.css';
 
-const research = () => {
+type Article = {
+  content: string 
+  excerpt: string 
+  slug: string 
+  title: string 
+}
+
+
+type Props = {
+  allArticles: Article[]
+}
+
+const research = ({allArticles}: Props) => {
+  
+  
   return (
     <>
       <Layout>
-        <section className='section'>
-          <div className={styles.container}>
-            <SectionTitle>My Publications</SectionTitle>
-            <div className='md:w-8/12'>
-              <Paragraph>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                aspernatur accusamus nemo molestias fuga et at quae mollitia
-                provident magni.
-              </Paragraph>
-            </div>
-            <ul className={styles.publications}>
-              {publicationsData.map((item) => {
-                return (
-                  <li key={item.id} className={styles.publication}>
-                    <CgChevronRight className='text-inherit' size={20} />
-                    <a
-                      href={item.href}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      className='ml-4 text-inherit'
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </section>
-        {/* <section className='mx-auto max-w-7xl my-20'>
-          <div className={`${styles.container} bg-secondaryLight`}>
-            <SectionTitle>My Research</SectionTitle>
-            <Canvas />
-          </div>
-        </section> */}
+        <Publications />
+        <Articles allArticles={allArticles} />
       </Layout>
     </>
   );
 };
 
 export default research;
+
+export const getServerSideProps = async () => {
+  const allArticles = getAllArticles(); 
+  
+  return {
+    props: {
+      allArticles, 
+    }
+  }
+}

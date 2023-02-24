@@ -1,3 +1,8 @@
+---
+title: 'optimization'
+excerpt: 'Suppose that you want to go on a round trip around USA. You select the cities you want to visit and mark them on a map. Suppose you can fly from one city to another in a straight line.'
+---
+
 Suppose that you want to go on a round trip around USA. You select the cities you want to visit and mark them on a map. Suppose you can fly from one city to another in a straight line. What is the shortest path that visits each city and gets you back to where you started? Try to connect all the cities using a shortest possible route. You choose a starting point by clicking on an arbitrary city. (My best route is 10572.92 Miles).
 
 Seems easy enough. However, if you found the shortest route to this particular problem in 1962, you would win $10 000, which is about $80 000 adjusted for inflation. "So where is the catch? Surely anybody with a computer can just run through all the possible routes." you ask. The catch is that there are 131 565 418 466 846 765 083 609 006 080 000 000 possible tours around these particular 33 cities. If you used a computer which checks a billion solutions per second, it would take 4 171 382 957 097 234 149 years to enumerate all solutions. All this trouble just to plan a trip around 33 cities.

@@ -1,3 +1,8 @@
+---
+title: 'evolutionary computation'
+excerpt: 'Evolution works on two levels, the genetic level, and the environmental level. On each level, there are two fundamental concepts: mating and survival of the fittest at the environmental level, and crossover and mutation on the genetic level'
+----
+
 Life is hard. The environment is full of dangers and it is constantly changing. Yet it is full of living organisms which successfully inhabit this planet for billions of years. Each individual living being is a survival expert in their particular domain. For example, the arctic rabbit is a survival expert in the domain of northern Canada. With a little bit of imagination, we can consider each individual arctic rabbit to be nature's solution to the mathematical problem of constructing a living machine capable of surviving in the arctic. Looking at how successful nature is in creating complicated solutions such as the arctic rabbit, humans tried to imitate evolution to solve mathematical problems.
 
 Evolution works on two levels, the genetic level, and the environmental level. On each level, there are two fundamental concepts: mating and survival of the fittest at the environmental level, and crossover and mutation on the genetic level.
