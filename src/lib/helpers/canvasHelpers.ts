@@ -14,8 +14,8 @@ export const render = (canvasContext: CanvasRenderingContext2D | null, mapCities
     city.render(canvasContext);
   });
 
-  canvasContext.fillStyle = City.colors.NORMAL;
-  canvasContext.font = 'bold 28px Arial';
+  canvasContext.fillStyle = '#EFE9E7';
+  canvasContext.font = 'bold 20px Arial';
   canvasContext.textBaseline = 'bottom';
   canvasContext.textAlign = 'start';
   var rounded = Math.round(path.value * 100) / 100;

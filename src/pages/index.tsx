@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout/Layout';
+import PageSection from '@/components/PageSection';
 import Paragraph from '@/components/paragraph';
 import Link from 'next/link';
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <section className='section'>
+        <PageSection variant='xl'>
           <div className={styles.container}>
             <h2 className='text-main_hello font-extrabold tracking-widest text-secondary'>
               Hello there,
@@ -45,7 +46,7 @@ export default function Home() {
               <SocialLinksList />
             </div>
           </div>
-        </section>
+        </PageSection>
       </Layout>
     </>
   );

@@ -4,27 +4,34 @@ import Publications from '@/components/publications/Publications';
 import Articles from '@/components/Articles/Articles';
 import { getAllArticles } from '@/lib/helpers/getArticles';
 // import styles from '../../styles/Research.module.css';
+import {serialize} from 'next-mdx-remote/serialize';
+import {MDXRemoteSerializeResult} from 'next-mdx-remote';
+import matter from 'gray-matter'; 
+
+import path from 'path'; 
+import fs from 'fs'; 
 
 type Article = {
-  content: string 
-  excerpt: string 
-  slug: string 
-  title: string 
-}
-
+  title: string;
+  excerpt: string;
+  slug: string;
+  mdxSource: MDXRemoteSerializeResult<
+    Record<string, unknown>,
+    Record<string, unknown>
+  >;
+};
 
 type Props = {
-  allArticles: Article[]
-}
+  allArticles: Article[]; 
+};
 
 const research = ({allArticles}: Props) => {
-  
-  
+      
   return (
     <>
       <Layout>
-        <Publications />
         <Articles allArticles={allArticles} />
+        <Publications />
       </Layout>
     </>
   );
@@ -32,9 +39,10 @@ const research = ({allArticles}: Props) => {
 
 export default research;
 
-export const getServerSideProps = async () => {
-  const allArticles = getAllArticles(); 
-  
+export const getStaticProps = async () => {
+    
+  const allArticles = await getAllArticles(serialize); 
+    
   return {
     props: {
       allArticles, 
