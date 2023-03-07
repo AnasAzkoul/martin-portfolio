@@ -7,11 +7,8 @@ type Props = {
 
 const ArticleLayout = ({children, title}: Props) => {
   return (
-    <article className='bg-secondaryLight py-40 z-50'>
-      <div className='md:w-2/3 mx-auto py-20 px-10 text-primary text-base'>
-        <h1 className='text-2xl my-6 font-semibold capitalize underline'>
-          {title}
-        </h1>
+    <article className='py-40 z-50'>
+      <div className='prose md:prose-lg lg:prose-xl m-auto px-6'> 
         {children}
       </div>
     </article>
