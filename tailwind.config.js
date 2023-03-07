@@ -24,6 +24,9 @@ module.exports = {
       animation: {
         fadeFromLeft: 'fadeFromLeft 2s ease-in-out',
       },
+      fontFamily: {
+        montserrat: `'Montserrat', sans-serif`,
+      },
     },
   },
   plugins: [],

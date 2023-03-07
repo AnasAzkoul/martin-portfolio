@@ -9,7 +9,7 @@ import styles from './navbar.module.css';
 const Navbar = () => {
   const {openSidebar} = useContext(uiContext); 
   return (
-    <header className='fixed w-full bg-primary'>
+    <header className='fixed w-full bg-primary z-40'>
       <nav className={styles.navigation}>
         <div className={styles.container}>
           <Logo />
@@ -18,7 +18,6 @@ const Navbar = () => {
             <RxHamburgerMenu size={20}/>
           </button>
         </div>
-        
       </nav>
     </header>
   );

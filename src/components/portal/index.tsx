@@ -5,6 +5,7 @@ const createWrapperAndAppendToBody = (wrapperID: string) => {
   if (!document) return; 
   const wrapperElement = document.createElement('div'); 
   wrapperElement.setAttribute('id', wrapperID); 
+  wrapperElement.className = 'portal'
   document.body.appendChild(wrapperElement); 
   return wrapperElement; 
 }

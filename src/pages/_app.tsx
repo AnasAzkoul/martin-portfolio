@@ -9,10 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   <UiProvider>
       <Component {...pageProps} />
   </UiProvider>
-
   );
 }
 
 
-
-// TODO: experiment with martin's ideas about the hello there text.

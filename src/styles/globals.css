@@ -8,16 +8,22 @@ html {
 }
 
 body {
-  @apply bg-primary; 
+
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
-.section {
-  @apply mx-auto mt-40 max-w-[114rem]; 
+main {
+  @apply h-screen; 
 }
+
+
 
 #canvas {
   width: 100%;
   height: auto;
+}
+
+.portal {
+ 
 }

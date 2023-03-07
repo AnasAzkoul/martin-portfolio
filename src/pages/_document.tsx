@@ -7,7 +7,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div id='sidebar'></div>
+        {/* <div id='modal-article'></div> */}
       </body>
     </Html>
   )

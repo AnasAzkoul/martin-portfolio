@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import Layout from '@/components/Layout/Layout';
 import Publications from '@/components/publications/Publications';
-import Articles from '@/components/Articles/Articles';
+import Articles from '@/components/Articles/ArticlesList';
 import { getAllArticles } from '@/lib/helpers/getArticles';
 // import styles from '../../styles/Research.module.css';
 import {serialize} from 'next-mdx-remote/serialize';

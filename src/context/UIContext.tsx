@@ -8,12 +8,16 @@ const initialVale = {
   isSidebarOpen: false,
   openSidebar: () => {}, 
   closeSidebar: () => {}, 
+  isPortalOpen: false, 
+  openPortal: () => {}, 
+  closePortal: () => {}, 
 };
 
 export const uiContext = createContext(initialVale); 
 
 const UiProvider = ({children}: Props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); 
+  const [isPortalOpen, setIsPortalOpen] = useState(false); 
     
   const openSidebar = () => {
     setIsSidebarOpen(true); 
@@ -24,10 +28,21 @@ const UiProvider = ({children}: Props) => {
     setIsSidebarOpen(false)
   }
   
+  const openPortal = () => {
+    setIsPortalOpen(true); 
+  }
+  
+  const closePortal = () => {
+    setIsPortalOpen(false)
+  }
+  
   const value = {
     isSidebarOpen, 
     openSidebar, 
-    closeSidebar
+    closeSidebar, 
+    isPortalOpen, 
+    openPortal, 
+    closePortal
   }
   
   return (

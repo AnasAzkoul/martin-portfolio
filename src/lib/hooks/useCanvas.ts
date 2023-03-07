@@ -28,7 +28,6 @@ export const useCanvas = () => {
   
   const onClearButton = () => {
     path = new Path(mapCities!, canvasContext);
-    console.log(path.indices); 
     path.colorCities(); 
     clear(canvasContext, mapCanvas); 
     render(canvasContext, mapCities, path, mapCanvas);
@@ -55,6 +54,8 @@ export const useCanvas = () => {
     canvas.style.backgroundImage = `url('${backgroundImage.src}')`;
     canvas.style.backgroundPosition = 'center center';
     canvas.style.backgroundSize = 'cover';
+    canvas.style.zIndex = '-100'
+    // canvas.style.position = 'relative'
 
     render(canvasContext, mapCities, path, mapCanvas);
 

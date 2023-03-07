@@ -1,29 +1,31 @@
-import React from 'react'; 
-import {useContext} from 'react';
+import { useContext } from 'react';
 import { uiContext } from '@/context/UIContext';
 import Link from 'next/link';
-import { navLinks } from '../../utils/constants'; 
-import styles from './navbar.module.css'; 
+import { navLinks } from '../../utils/constants';
+import styles from './navbar.module.css';
 
 type Props = {
-  type?: 'mobile'
-}
+  type?: 'mobile';
+};
 
-const NavLinks = ({type}: Props) => {
-  const {closeSidebar} = useContext(uiContext); 
+const NavLinks = ({ type }: Props) => {
+  const { closeSidebar } = useContext(uiContext);
+
   return (
     <ul
       className={`${styles.links} ${type === 'mobile' && styles.links_mobile}`}
     >
-      {navLinks.map((link) => {
+      {navLinks.map((link,index) => {
         return (
-          <li key={link.id} onClick={closeSidebar}>
-            <Link href={link.url} className='w-full'>{link.text}</Link>
+          <li onClick={closeSidebar} className='relative' key={link.id}>
+            <Link href={link.url} className={`${styles.link} animate-fadeFromLeft`}>
+              {link.text}
+            </Link>
           </li>
         );
       })}
     </ul>
   );
-}
+};
 
-export default NavLinks
+export default NavLinks;
