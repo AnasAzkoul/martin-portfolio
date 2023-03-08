@@ -3,27 +3,36 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  /* font-size: 62.5%; */
+@layer components {
+  .primary-navigation-container {
+    @apply bg-secondary/80 backdrop-blur-md fixed top-0 right-0 h-full w-3/5 sm:w-2/5; 
+    @apply md:static md:h-auto md:right-6 md:bg-primary; 
+  }
+  
+  .primary-navigation {
+    @apply pl-6 py-16 capitalize font-montserrat text-base text-primary md:text-gray-500 z-50; 
+    @apply md:flex md:gap-4 lg:gap-0 md:justify-between md:py-0 whitespace-nowrap
+  }
+  
+  .mobile-nav-toggle {
+    @apply absolute text-2xl z-50 right-6 text-primary md:hidden
+  }
+  
+  .mobile-nav-closed {
+    @apply text-black
+  }
+  
+  .nav-link {
+    @apply before:content-[""] before:absolute before:w-full before:h-[2px] before:bg-gray-400 before:bottom-0 before:left-0 before:scale-x-0 hover:before:scale-x-100 before:transition-all before:duration-200 before:ease-in; 
+  }
 }
 
 body {
-
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
-main {
-  @apply h-screen; 
-}
-
-
-
 #canvas {
   width: 100%;
   height: auto;
-}
-
-.portal {
- 
 }

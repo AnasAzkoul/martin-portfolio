@@ -2,25 +2,59 @@ import React, {useContext} from 'react';
 import { uiContext } from '@/context/UIContext';
 import Link from 'next/link';
 import Logo from './Logo';
-import NavLinks from './NavLinks';
+import {navLinks} from '@/utils/constants';
+import {AiOutlineClose} from 'react-icons/ai'; 
 import { RxHamburgerMenu } from 'react-icons/rx'; 
-import styles from './navbar.module.css'; 
 
 const Navbar = () => {
-  const {openSidebar} = useContext(uiContext); 
+  const {closeSidebar, isSidebarOpen, toggleSidebar} = useContext(uiContext); 
+
+  
   return (
-    <header className='fixed w-full bg-primary z-40'>
-      <nav className={styles.navigation}>
-        <div className={styles.container}>
+    <header className='fixed w-full top-0 left-0 bg-primary'>
+      <div className='max-w-7xl xl:max-w-full xl:px-20 mx-auto flex items-center justify-between p-6 z-50'>
+        <div>
           <Logo />
-          <NavLinks />
-          <button className='md:hidden' onClick={openSidebar}>
-            <RxHamburgerMenu size={20}/>
-          </button>
         </div>
-      </nav>
+
+        <button
+          aria-controls='primary-navigation'
+          aria-expanded='false'
+          className={`${
+            !isSidebarOpen ? 'mobile-nav-closed' : ''
+            } mobile-nav-toggle`}
+          onClick={toggleSidebar}
+        >
+          {isSidebarOpen ? <AiOutlineClose /> : <RxHamburgerMenu />}
+        </button>
+
+        <nav
+          className={`primary-navigation-container 
+          ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'}`}
+        >
+          <ul className='primary-navigation' id='primary-navigation'>
+            {navLinks.map((item) => {
+              return (
+                <li
+                  key={item.id}
+                  className='py-4'
+                  onClick={closeSidebar}
+                >
+                  <Link
+                    href={item.url}
+                    className=''
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
+
 
 export default Navbar

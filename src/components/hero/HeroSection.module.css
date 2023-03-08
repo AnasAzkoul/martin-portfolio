@@ -8,8 +8,8 @@
 }
 
 .arrow {
-  @apply ml-4 text-lg text-secondaryLight; 
-  animation: arrow 1.5s linear infinite;
+  @apply ml-4 text-lg text-secondaryLight z-[-999]; 
+  /* animation: arrow 1.5s linear infinite; */
 }
 
 

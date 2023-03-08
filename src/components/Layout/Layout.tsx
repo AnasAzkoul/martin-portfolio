@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Navbar from '../header/Navbar';
-import Sidebar from '../header/Sidebar';
 import styles from './layout.module.css'; 
+
 
 type Props = {
   children: React.ReactNode;
@@ -17,7 +17,6 @@ const Layout = ({ children }: Props) => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <main className='relative overflow-x-hidden bg-primary'>
-        <Sidebar />
         <Navbar />
         {children}
       </main>

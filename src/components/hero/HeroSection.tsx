@@ -30,7 +30,7 @@ const HeroSection = (props: Props) => {
             facilis!
           </Paragraph>
         </div>
-        <button>
+        <button className='z-0'>
           <Link
             href='/about'
             className='flex items-center text-base text-gray-500'
