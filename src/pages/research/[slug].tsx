@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import Layout from '@/components/Layout/Layout';
 import ArticleLayout from '@/components/Articles/ArticleLayout';
 import Canvas from '@/components/Canvas/Canvas';
@@ -6,7 +6,9 @@ import type { GetStaticProps, GetStaticPaths } from 'next';
 import fs from 'fs';
 import { getArticleData, folderPath } from '../../lib/helpers/getArticles';
 import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote';
+import { useScrollProgressBar } from '@/lib/hooks/useScrollProgressbar';
+import styles from '../../styles/Research.module.css'; 
 
 type Props = {
   articleData: {
@@ -21,11 +23,14 @@ type Props = {
 
 const components = { Canvas };
 
-const ArticlePage = ({ articleData }: Props) => {
 
+
+const ArticlePage = ({articleData}: Props) => {
+  const progressRef = useScrollProgressBar(); 
 
   return (
     <Layout>
+      <div id='progress' className={styles.progress} ref={progressRef}></div>
       <ArticleLayout title={articleData.title}>
         <MDXRemote {...articleData.mdxSource} components={components} />
       </ArticleLayout>

@@ -23,7 +23,7 @@ const SingleArticleItem = ({article}: Props) => {
   
   return (
     <li key={article.slug} className='my-4'>
-      <h3 className='text-[#0098A3] capitalize font-semibold'>
+      <h3 className='text-secondaryLight text-base capitalize font-semibold'>
         {article.title}
       </h3>
       <div className='md:w-8/12'>
