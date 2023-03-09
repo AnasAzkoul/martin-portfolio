@@ -22,7 +22,7 @@ const Articles = ({allArticles}: Props) => {
 
   
   return (
-    <PageSection>
+    <PageSection id='research'>
       <SectionTitle>Research</SectionTitle>
       <ul>
         {allArticles.map(article => {

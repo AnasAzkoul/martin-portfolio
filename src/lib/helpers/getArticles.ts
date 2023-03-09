@@ -32,7 +32,7 @@ export const getAllArticles = async (serialize: Serialize) => {
   
   const articlesDataArray = await Promise.all(articles.map((fileName => {
     return getArticleData(fileName, serialize);
-  })))
+  })).reverse())
   
   return articlesDataArray
 }

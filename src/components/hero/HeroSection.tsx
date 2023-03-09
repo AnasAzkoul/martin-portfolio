@@ -10,7 +10,7 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <PageSection>
+    <PageSection id='home'>
       <div className='pt-10 md:pt-16 xl:pt-40'>
         <h2 className='text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest leading-loose text-secondary'>
           Hello there,
@@ -18,7 +18,7 @@ const HeroSection = (props: Props) => {
         <h1 className='text-4xl lg:text-5xl lg:leading-snug font-extrabold tracking-widest leading-tight text-secondaryLight'>
           {"I'm Martin Drozdik."}
         </h1>
-        <div className=''>
+        <div className='lg:w-2/3'>
           <Paragraph>
             Hello, I am a freelance software developer and a researcher in the
             field of computational intelligence. Currently I am living in

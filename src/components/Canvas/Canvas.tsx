@@ -8,8 +8,8 @@ const Canvas = (props: Props) => {
   const {canvasRef, onClickHandler, onClearButton} = useCanvas(); 
   
   return (
-    <div className='relative my-8 bg-secondaryLight'>
-      <canvas ref={canvasRef} className={styles.canvas} id='canvas' onClick={(e) => onClickHandler(e)} />
+    <div className='relative my-8 bg-secondaryLight z-0'>
+      <canvas ref={canvasRef} id='canvas' onClick={(e) => onClickHandler(e)} />
       <div className='flex justify-end px-10'>
         <button
           onClick={() => onClearButton()}

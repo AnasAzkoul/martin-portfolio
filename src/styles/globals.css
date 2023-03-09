@@ -30,7 +30,6 @@
   }
   
   .nav-link-hover {
-    /* @apply before:content-[""] before:absolute before:bottom-3 before:left-0 before:w-full before:h-0.5 before:bg-primary before:scale-0 hover:before:scale-100 before:transition-all before:duration-200 before:ease-in;  */
     @apply hover:bg-secondary
   }
 }

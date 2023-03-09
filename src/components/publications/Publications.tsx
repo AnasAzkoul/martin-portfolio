@@ -10,7 +10,7 @@ type Props = {};
 
 const Publications = (props: Props) => {
   return (
-    <PageSection>
+    <PageSection id='publications'>
       <SectionTitle>My Publications</SectionTitle>
       <div className='md:w-8/12'>
         <Paragraph>
