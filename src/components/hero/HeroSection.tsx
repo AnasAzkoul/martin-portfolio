@@ -20,9 +20,9 @@ const HeroSection = (props: Props) => {
         </h1>
         <div className=''>
           <Paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            numquam quibusdam corrupti non quidem sit earum saepe nihil ratione
-            facilis!
+            Hello, I am a freelance software developer and a researcher in the
+            field of computational intelligence. Currently I am living in
+            Vienna, Austria.
           </Paragraph>
           <Paragraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat

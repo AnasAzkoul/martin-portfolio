@@ -8,7 +8,7 @@
 }
 
 .logo { 
-  @apply text-xl font-bold cursor-pointer; 
+  @apply text-xl font-bold cursor-pointer md:text-primary; 
 }
 
 .links {

@@ -11,8 +11,8 @@ const Navbar = () => {
 
   
   return (
-    <header className='fixed w-full top-0 left-0 bg-primary'>
-      <div className='max-w-7xl xl:max-w-screen-2xl xl:px-20 mx-auto flex items-center justify-between p-6 z-50'>
+    <header className='fixed w-full top-0 left-0 bg-primary md:bg-secondaryLight'>
+      <div className='max-w-7xl xl:max-w-screen-2xl xl:px-20  mx-auto flex items-center justify-between p-6 z-50'>
         <div>
           <Logo />
         </div>
@@ -37,10 +37,13 @@ const Navbar = () => {
               return (
                 <li
                   key={item.id}
-                  className='py-4 relative'
+                  className='md:py-2 md:px-4 py-6 w-full md:text-center cursor-pointer relative nav-link-hover'
                   onClick={closeSidebar}
                 >
-                  <Link href={item.url} className='nav-link-hover'>
+                  <Link
+                    href={item.url}
+                    className='font-semibold md:text-primary'
+                  >
                     {item.text}
                   </Link>
                 </li>
