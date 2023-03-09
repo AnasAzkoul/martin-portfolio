@@ -37,13 +37,10 @@ const Navbar = () => {
               return (
                 <li
                   key={item.id}
-                  className='py-4'
+                  className='py-4 relative'
                   onClick={closeSidebar}
                 >
-                  <Link
-                    href={item.url}
-                    className=''
-                  >
+                  <Link href={item.url} className='nav-link-hover'>
                     {item.text}
                   </Link>
                 </li>
