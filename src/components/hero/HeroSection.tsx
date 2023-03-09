@@ -10,15 +10,15 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <PageSection variant='xl'>
-      <div className={styles.container}>
-        <h2 className='text-main_hello font-extrabold tracking-widest text-secondary'>
+    <PageSection>
+      <div className='pt-10 md:pt-16 xl:pt-40'>
+        <h2 className='text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-widest leading-loose text-secondary'>
           Hello there,
         </h2>
-        <h1 className='text-main_heading font-extrabold tracking-widest text-secondaryLight'>
+        <h1 className='text-4xl lg:text-5xl lg:leading-snug font-extrabold tracking-widest leading-tight text-secondaryLight'>
           I'm Martin Drozdik.
         </h1>
-        <div className='md:w-7/12'>
+        <div className=''>
           <Paragraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
             numquam quibusdam corrupti non quidem sit earum saepe nihil ratione

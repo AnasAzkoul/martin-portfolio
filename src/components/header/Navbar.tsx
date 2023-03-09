@@ -12,7 +12,7 @@ const Navbar = () => {
   
   return (
     <header className='fixed w-full top-0 left-0 bg-primary'>
-      <div className='max-w-7xl xl:max-w-full xl:px-20 mx-auto flex items-center justify-between p-6 z-50'>
+      <div className='max-w-7xl xl:max-w-screen-2xl xl:px-20 mx-auto flex items-center justify-between p-6 z-50'>
         <div>
           <Logo />
         </div>

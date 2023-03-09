@@ -27,9 +27,11 @@
   }
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
+@layer base {
+  body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
 }
 
 #canvas {
