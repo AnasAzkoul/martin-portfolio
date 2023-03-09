@@ -22,7 +22,7 @@ const Articles = ({allArticles}: Props) => {
 
   
   return (
-    <PageSection variant='xl'>
+    <PageSection>
       <SectionTitle>Research</SectionTitle>
       <ul>
         {allArticles.map(article => {

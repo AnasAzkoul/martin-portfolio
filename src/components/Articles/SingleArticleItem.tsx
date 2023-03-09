@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import Link from 'next/link';
 import Paragraph from '../paragraph';
 import {MDXRemoteSerializeResult} from 'next-mdx-remote';
-import { uiContext } from '@/context/UIContext';
+
 
 type Article = {
   title: string 
@@ -19,7 +19,7 @@ type Props = {
 };
 
 const SingleArticleItem = ({article}: Props) => {
-  const {openPortal} = useContext(uiContext); 
+
   
   return (
     <li key={article.slug} className='my-4'>
@@ -31,7 +31,6 @@ const SingleArticleItem = ({article}: Props) => {
           {article.excerpt}
           <br />
           <Link
-            onClick={openPortal}
             href={`/research/${article.slug}`}
             className='text-blue-500 text-sm'
           >

@@ -16,7 +16,7 @@ const HeroSection = (props: Props) => {
           Hello there,
         </h2>
         <h1 className='text-4xl lg:text-5xl lg:leading-snug font-extrabold tracking-widest leading-tight text-secondaryLight'>
-          I'm Martin Drozdik.
+          {"I'm Martin Drozdik."}
         </h1>
         <div className=''>
           <Paragraph>

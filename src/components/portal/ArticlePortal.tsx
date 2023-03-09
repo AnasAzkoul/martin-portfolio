@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import Portal from '.';
-import { uiContext } from '@/context/UIContext';
+
 
 type Props = {
   children: React.ReactNode;
@@ -8,16 +8,7 @@ type Props = {
 };
 
 const ArticlePortal = ({ children, title }: Props) => {
-  const { closePortal, isPortalOpen } = useContext(uiContext);
 
-  useEffect(() => {
-    const onCloseEscapeKey = (e: KeyboardEvent) =>
-      e.key === 'Escape' ? closePortal() : null;
-
-    document.addEventListener('keydown', onCloseEscapeKey);
-
-    return document.removeEventListener('keydown', onCloseEscapeKey);
-  }, [closePortal]);
 
   return (
     <Portal wrapperID='react-portal-modal-article'>
