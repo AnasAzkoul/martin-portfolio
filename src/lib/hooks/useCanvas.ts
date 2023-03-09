@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, {useRef, useEffect, useState, useCallback} from 'react';
 import {resetCities} from '../optimization/cities';
 import Path from '../optimization/path';
 import {City} from '../optimization/city';
@@ -26,12 +26,14 @@ export const useCanvas = () => {
     render(canvasContext, mapCities, path, mapCanvas);
   };
   
-  const onClearButton = () => {
+  
+  
+  const onClearButton = useCallback(() => {
     path = new Path(mapCities!, canvasContext);
     path.colorCities(); 
     clear(canvasContext, mapCanvas); 
     render(canvasContext, mapCities, path, mapCanvas);
-  };
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
