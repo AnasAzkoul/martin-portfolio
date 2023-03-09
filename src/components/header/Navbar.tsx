@@ -12,7 +12,7 @@ const Navbar = () => {
   
   return (
     <header className='fixed w-full top-0 left-0 bg-primary md:bg-secondaryLight z-50'>
-      <div className='max-w-7xl xl:max-w-screen-2xl xl:px-20 z-50 px-10 py-4 md:py-0 mx-auto flex items-center justify-between'>
+      <div className='max-w-7xl xl:max-w-screen-2xl xl:px-20 z-50 px-6 py-4 md:py-0 mx-auto flex items-center justify-between'>
         <div>
           <Logo />
         </div>
