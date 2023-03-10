@@ -28,12 +28,12 @@ export const useCanvas = () => {
   
   
   
-  const onClearButton = useCallback(() => {
+  const onClearButton = () => {
     path = new Path(mapCities!, canvasContext);
     path.colorCities(); 
     clear(canvasContext, mapCanvas); 
     render(canvasContext, mapCities, path, mapCanvas);
-  }, []);
+  }
 
   useEffect(() => {
     const canvas = canvasRef.current;

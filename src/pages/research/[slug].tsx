@@ -9,6 +9,9 @@ import { serialize } from 'next-mdx-remote/serialize';
 import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote';
 import { useScrollProgressBar } from '@/lib/hooks/useScrollProgressbar';
 import styles from '../../styles/Research.module.css'; 
+import Image from 'next/image';
+import ArticleImage from '@/components/ArticleImage';
+
 
 type Props = {
   articleData: {
@@ -21,7 +24,7 @@ type Props = {
   };
 };
 
-const components = { Canvas };
+const components = { Canvas, ArticleImage, Image };
 
 
 

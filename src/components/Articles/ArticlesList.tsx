@@ -22,16 +22,18 @@ const Articles = ({allArticles}: Props) => {
 
   
   return (
-    <PageSection id='research'>
-      <SectionTitle>Research</SectionTitle>
-      <ul>
-        {allArticles.map(article => {
-          return (
-            <SingleArticleItem key={article.slug} article={article}/>
-          );
-        })}
-      </ul>
-    </PageSection>
+
+      <PageSection id='research'>
+        <SectionTitle>Research</SectionTitle>
+        <ul>
+          {allArticles.map(article => {
+            return (
+              <SingleArticleItem key={article.slug} article={article}/>
+            );
+          })}
+        </ul>
+      </PageSection>
+
   )
 }
 

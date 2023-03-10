@@ -27,40 +27,38 @@ type SocialLinkTypes = {
 export const socialLinks: SocialLinkTypes[] = [
   {
     id: 1,
-    icon: <BsStackOverflow className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Stack Overflow'
-  }, 
+    icon: (
+      <BsStackOverflow className='social-link' />
+    ),
+    name: 'Stack Overflow',
+  },
   {
     id: 2,
-    icon: <IoLogoBitbucket className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Bit Bucket'
-  }, 
+    icon: (
+      <IoLogoBitbucket className='social-link' />
+    ),
+    name: 'Bit Bucket',
+  },
   {
     id: 3,
-    icon: <SiResearchgate className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Research Gate'
-  }, 
+    icon: (
+      <SiResearchgate className='social-link' />
+    ),
+    name: 'Research Gate',
+  },
   {
     id: 4,
-    icon: <AiFillGithub className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Github'
-  }, 
+    icon: (
+      <AiFillGithub className='social-link' />
+    ),
+    name: 'Github',
+  },
   {
     id: 5,
-    icon: <AiOutlineLinkedin className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Linkedin'
-  }, 
-  {
-    id: 6,
-    icon: <FiTwitter className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'Twitter'
-  }, 
-  {
-    id: 7,
-    icon: <AiOutlineMail className='hover:scale-125 transition-all duration-200 ease-in hover:text-secondaryLight text-xl'/>,
-    name: 'email'
-  }, 
-]
+    icon: <AiOutlineLinkedin className='social-link' />,
+    name: 'Linkedin',
+  },
+];
 
 
 export const publicationsData = [

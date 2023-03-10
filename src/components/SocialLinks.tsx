@@ -1,9 +1,14 @@
 import React from 'react';
 import {socialLinks} from '@/utils/constants';
 
-const SocialLinksList = () => {
+
+type Props = {
+  extraClasses?: string 
+}
+
+const SocialLinksList = ({extraClasses}: Props) => {
   return (
-    <ul className='flex gap-20 cursor-pointer flex-wrap'>
+    <ul className={`flex gap-10 cursor-pointer flex-wrap ${extraClasses}`}>
       {socialLinks.map((link) => {
         return <li key={link.id}>{link.icon}</li>;
       })}

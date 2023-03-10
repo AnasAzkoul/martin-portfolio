@@ -1,15 +1,17 @@
 import React from 'react';
-import Link from 'next/link';
 import PageSection from '../PageSection';
 import Paragraph from '../paragraph';
+import Button from '../Button';
 import SectionTitle from '../SectionTitle';
 import SocialLinksList from '../SocialLinks';
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import styles from './HeroSection.module.css';
+
 
 type Props = {};
 
 const HeroSection = (props: Props) => {
+
+  
   return (
     <PageSection id='home'>
       <div className='pt-10 md:pt-16 xl:pt-48 xl:pb-44'>
@@ -35,17 +37,9 @@ const HeroSection = (props: Props) => {
             facilis!
           </Paragraph>
         </div>
-        <button className='z-0'>
-          <Link
-            href='/about'
-            className='flex items-center text-base text-gray-500'
-          >
-            Learn More About Me
-            <AiOutlineArrowRight className={styles.arrow} />
-          </Link>
-        </button>
+        <Button>My Resume</Button>
         <div className={styles.social_links_container}>
-          <SocialLinksList />
+          <SocialLinksList /> 
         </div>
       </div>
     </PageSection>

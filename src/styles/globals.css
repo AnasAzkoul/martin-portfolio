@@ -3,11 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
-  
   body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
@@ -35,6 +36,18 @@
   
   .nav-link-hover {
     @apply hover:bg-secondary
+  }
+}
+
+@layer components {
+  .social-link {
+    @apply hover:scale-150 transition-all duration-100 ease-in hover:text-secondaryLight text-xl text-gray-500; 
+  }
+  
+  .btn {
+    @apply z-10 relative w-40 text-center border border-secondaryLight text-secondaryLight text-sm px-6 py-2 rounded-lg  hover:text-primary hover:-translate-y-px active:translate-y-px hover:shadow-md hover:shadow-secondary active:shadow-sm; 
+    
+    @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:bg-secondaryLight before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md; 
   }
 }
 
