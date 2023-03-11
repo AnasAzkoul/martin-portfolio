@@ -1,8 +1,11 @@
-1- add photos to the second article 
+<!-- 1- add photos to the second article  -->
+    - make sure the order of the photos is correct according to the original article 
 
 <!-- 2- deal with the social links on different screen sizes 
     - on mobile add to the bottom of the side nav 
     - on desktop make the icons close together and delete the email link  -->
+
+- deal with typography 
 
 3- add a contact section 
 
@@ -17,3 +20,13 @@
 8- make the background for the navbar transparent when scrolling 
 
 9- add animation to section with animation delay 
+
+10- write functionality for the next and previous article in the article page use indexOf()
+    - migrate node functions that fetch files to async 
+
+11- remove the shadow from the button
+
+12 - always kiss your wife 
+
+
+- think about adding dark mode. 
