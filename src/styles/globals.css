@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -17,40 +15,39 @@
 
 @layer components {
   .primary-navigation-container {
-    @apply bg-secondary/80 backdrop-blur-md fixed top-0 right-0 h-full w-3/5 sm:w-2/5; 
-    @apply md:static md:h-auto md:right-6 md:bg-primary; 
+    @apply bg-secondary/80 backdrop-blur-sm fixed top-0 right-0 h-full w-3/5 sm:w-2/5 transition-transform duration-300 ease-in;
+    @apply md:static md:h-auto md:right-6 md:bg-primary;
   }
-  
+
   .primary-navigation {
-    @apply pl-6 py-16 capitalize font-montserrat text-base text-primary z-50; 
-    @apply md:flex md:justify-between md:p-0 whitespace-nowrap md:bg-secondaryLight
+    @apply pl-6 py-16 capitalize font-montserrat text-base text-primary z-50;
+    @apply md:flex md:justify-between md:p-0 whitespace-nowrap md:bg-secondaryLight;
   }
-  
+
   .mobile-nav-toggle {
-    @apply absolute text-2xl z-50 right-6 text-primary md:hidden
+    @apply absolute text-2xl z-50 right-6 text-primary md:hidden;
   }
-  
+
   .mobile-nav-closed {
-    @apply text-black
+    @apply text-black;
   }
-  
+
   .nav-link-hover {
-    @apply hover:bg-secondary
+    @apply hover:bg-secondary;
   }
 }
 
 @layer components {
   .social-link {
-    @apply hover:scale-150 transition-all duration-100 ease-in hover:text-secondaryLight text-xl text-gray-500; 
+    @apply hover:scale-150 transition-all duration-100 ease-in hover:text-secondaryLight text-xl text-gray-500;
   }
-  
+
   .btn {
-    @apply z-10 relative w-40 text-center border border-secondaryLight text-secondaryLight text-sm px-6 py-2 rounded-lg  hover:text-primary hover:-translate-y-px active:translate-y-px hover:shadow-md hover:shadow-secondary active:shadow-sm; 
-    
-    @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:bg-secondaryLight before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md; 
+    @apply z-10 relative w-40 text-center border border-secondaryLight text-secondaryLight text-sm px-6 py-2 rounded-lg  hover:text-primary hover:-translate-y-px active:translate-y-px hover:shadow-md hover:shadow-secondary active:shadow-sm;
+
+    @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:bg-secondaryLight before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md;
   }
 }
-
 
 #canvas {
   width: 100%;
