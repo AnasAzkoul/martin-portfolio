@@ -1,7 +1,7 @@
 import React from 'react';
-import PageSection from '../PageSection';
-import Paragraph from '../paragraph';
-import SectionTitle from '../SectionTitle';
+import PageSection from '../ui/PageSection';
+import Paragraph from '../ui/paragraph';
+import SectionTitle from '../ui/SectionTitle';
 import { publicationsData } from '@/utils/constants';
 import { CgChevronRight } from 'react-icons/cg';
 import styles from './publications.module.css';
@@ -15,8 +15,8 @@ const Publications = (props: Props) => {
       <div className='md:w-8/12'>
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          aspernatur accusamus nemo molestias fuga et at quae mollitia
-          provident magni.
+          aspernatur accusamus nemo molestias fuga et at quae mollitia provident
+          magni.
         </Paragraph>
       </div>
       <ul className={styles.publications}>

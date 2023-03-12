@@ -1,26 +1,23 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import Link from 'next/link';
-import Paragraph from '../paragraph';
-import {MDXRemoteSerializeResult} from 'next-mdx-remote';
-
+import Paragraph from '../ui/paragraph';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
 type Article = {
-  title: string 
-  excerpt: string 
-  slug: string 
+  title: string;
+  excerpt: string;
+  slug: string;
   mdxSource: MDXRemoteSerializeResult<
     Record<string, unknown>,
     Record<string, unknown>
   >;
-}
-
-type Props = {
-  article: Article
 };
 
-const SingleArticleItem = ({article}: Props) => {
+type Props = {
+  article: Article;
+};
 
-  
+const SingleArticleItem = ({ article }: Props) => {
   return (
     <li key={article.slug} className='my-4'>
       <h3 className='text-secondaryLight text-base capitalize font-semibold'>

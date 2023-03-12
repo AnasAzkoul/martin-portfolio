@@ -13,8 +13,8 @@ import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote';
 import { useScrollProgressBar } from '@/lib/hooks/useScrollProgressbar';
 import styles from '../../styles/Research.module.css'; 
 import Image from 'next/image';
-import ArticleImage from '@/components/ArticleImage';
-import NextArticleLink from '@/components/NextArticleLink';
+import ArticleImage from '@/components/ui/ArticleImage';
+import NextArticleLink from '@/components/ui/NextArticleLink';
 
 
 

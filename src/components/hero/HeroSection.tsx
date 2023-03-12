@@ -1,17 +1,14 @@
 import React from 'react';
-import PageSection from '../PageSection';
-import Paragraph from '../paragraph';
-import Button from '../Button';
-import SectionTitle from '../SectionTitle';
-import SocialLinksList from '../SocialLinks';
+import PageSection from '../ui/PageSection';
+import Paragraph from '../ui/paragraph';
+import Button from '../ui/Button';
+import SectionTitle from '../ui/SectionTitle';
+import SocialLinksList from '../ui/SocialLinks';
 import styles from './HeroSection.module.css';
-
 
 type Props = {};
 
 const HeroSection = (props: Props) => {
-
-  
   return (
     <PageSection id='home'>
       <div className='pt-10 md:pt-16 xl:pt-48 xl:pb-44'>
@@ -39,7 +36,7 @@ const HeroSection = (props: Props) => {
         </div>
         <Button>My Resume</Button>
         <div className={styles.social_links_container}>
-          <SocialLinksList /> 
+          <SocialLinksList />
         </div>
       </div>
     </PageSection>

@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { uiContext } from '@/context/UIContext';
-import { navLinks } from '@/utils/constants';
-
-
+import {navLinks} from '@/utils/constants';
 
 const PrimaryNavigation = () => {
   const {isSidebarOpen, closeSidebar} = useContext(uiContext);
@@ -20,10 +18,10 @@ const PrimaryNavigation = () => {
         {navLinks.map((item) => {
           return (
             <li
-              key={item.id}
-              className='md:py-6 md:px-4 py-6 w-full md:text-center cursor-pointer relative nav-link-hover'
+            key={item.id}
+            className='md:py-6 md:px-4 py-6 w-full md:text-center cursor-pointer relative nav-link-hover'
               onClick={closeSidebar}
-            >
+              >
               <Link href={item.url} className='font-semibold md:text-primary'>
                 {item.text}
               </Link>
