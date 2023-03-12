@@ -13,6 +13,8 @@ import styles from '../../styles/Research.module.css';
 import Image from 'next/image';
 import ArticleImage from '@/components/ArticleImage';
 
+import NextArticleLink from '@/components/NextArticleLink';
+
 
 
 type Props = {
@@ -41,21 +43,11 @@ const ArticlePage = ({articleData, nextPage, prevPage}: Props) => {
       <div id='progress' className={styles.progress} ref={progressRef}></div>
       <ArticleLayout title={articleData.title}>
         <MDXRemote {...articleData.mdxSource} components={components} />
-        <div className={`flex justify-between`}>
+        <div className={`flex justify-between relative pt-4 px-4`}>
           {prevPage && (
-            <Link
-              href={`/research/${prevPage}`}
-            >
-              Previous Article
-            </Link>
+            <NextArticleLink href={`/research/${prevPage}`} direction='left'>Prev</NextArticleLink>
           )}
-          {nextPage && (
-            <Link
-              href={`/research/${nextPage}`}
-            >
-              Next Article
-            </Link>
-          )}
+          {nextPage && <NextArticleLink href={`/research/${nextPage}`} direction='right'>Next</NextArticleLink>}
         </div>
       </ArticleLayout>
     </Layout>
