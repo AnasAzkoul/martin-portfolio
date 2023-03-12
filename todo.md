@@ -21,12 +21,9 @@
 
 9- add animation to section with animation delay 
 
-10- write functionality for the next and previous article in the article page use indexOf()
-    - migrate node functions that fetch files to async 
+<!-- 10- write functionality for the next and previous article in the article page use indexOf()
+    - migrate node functions that fetch files to async  -->
 
 11- remove the shadow from the button
-
-12 - always kiss your wife 
-
 
 - think about adding dark mode. 

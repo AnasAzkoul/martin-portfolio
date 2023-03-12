@@ -36,7 +36,7 @@ const Navbar = () => {
           <PrimaryNavigation />
         </div>
       </header>
-      <div id='overlay-navigation' className={overlayStyles}></div>
+      <div id='overlay-navigation' className={overlayStyles} onClick={toggleSidebar}></div>
     </>
   );
 };

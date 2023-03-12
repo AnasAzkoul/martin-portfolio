@@ -15,7 +15,7 @@
 
 @layer components {
   .primary-navigation-container {
-    @apply bg-secondary/80 backdrop-blur-sm fixed top-0 right-0 h-full w-3/5 sm:w-2/5 transition-transform duration-300 z-50 ease-in;
+    @apply bg-secondary/80 backdrop-blur-sm fixed top-0 right-0 h-full w-3/5 sm:w-2/5 transition-transform duration-150 z-50 ease-in;
     @apply md:static md:h-auto md:right-6 md:bg-primary;
   }
 
