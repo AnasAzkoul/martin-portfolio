@@ -28,7 +28,8 @@ const SingleArticleItem = ({ article }: Props) => {
           {article.excerpt}
           <br />
           <Link
-            href={`/research/${article.slug}`}
+            href={`/research/[slug]`}
+            as={`/research/${article.slug}`}
             className='text-blue-500 text-sm'
           >
             read more...

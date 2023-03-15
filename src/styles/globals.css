@@ -14,15 +14,6 @@
 }
 
 @layer components {
-  .primary-navigation-container {
-    @apply bg-secondary/80 backdrop-blur-sm fixed top-0 right-0 h-full w-3/5 sm:w-2/5 transition-transform duration-150 z-50 ease-in;
-    @apply md:static md:h-auto md:right-6 md:bg-primary;
-  }
-
-  .primary-navigation {
-    @apply pl-6 py-16 capitalize font-montserrat text-base text-primary z-50;
-    @apply md:flex md:justify-between md:p-0 whitespace-nowrap md:bg-secondaryLight;
-  }
 
   .mobile-nav-toggle {
     @apply absolute text-2xl z-[1000] right-6 text-primary md:hidden;
@@ -33,7 +24,7 @@
   }
 
   .nav-link-hover {
-    @apply hover:bg-secondary;
+    @apply before:bg-secondary before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:scale-x-0 hover:before:scale-x-100  before:transition-all before:duration-100 before:ease-in before:origin-left before:rounded-md before:-z-10;
   }
 }
 
@@ -43,10 +34,19 @@
   }
 
   .btn {
-    @apply z-10 relative w-40 text-center border border-secondaryLight text-secondaryLight text-sm px-6 py-2 rounded-lg  hover:text-primary hover:-translate-y-px active:translate-y-px hover:shadow-md hover:shadow-secondary active:shadow-sm;
+    @apply z-10 relative text-center rounded-lg hover:-translate-y-px active:translate-y-px border;
 
-    @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:bg-secondaryLight before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md;
+    @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md;
   }
+
+  .btn-primary {
+
+  }
+
+  .btn-outline {
+    @apply border-secondaryLight bg-primary text-secondaryLight hover:text-primary before:bg-secondaryLight
+  }
+
 }
 
 #canvas {

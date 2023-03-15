@@ -2,9 +2,10 @@ import Layout from '@/components/Layout/Layout';
 import HeroSection from '@/components/hero/HeroSection';
 import Articles from '@/components/Articles/ArticlesList';
 import Publications from '@/components/publications/Publications';
-import {getAllArticles} from '@/lib/helpers/getArticles';
-import {serialize} from 'next-mdx-remote/serialize';
-import {MDXRemoteSerializeResult} from 'next-mdx-remote';
+import { getAllArticles } from '@/lib/helpers/getArticles';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemoteSerializeResult } from 'next-mdx-remote';
+
 
 
 type Article = {
@@ -18,10 +19,10 @@ type Article = {
 };
 
 type Props = {
-  allArticles: Article[]; 
+  allArticles: Article[];
 };
 
-export default function Home({allArticles}: Props) {
+export default function Home({ allArticles }: Props) {
   return (
     <>
       <Layout>
@@ -34,11 +35,11 @@ export default function Home({allArticles}: Props) {
 }
 
 export const getStaticProps = async () => {
-  const allArticles = await getAllArticles(serialize); 
-    
+  const allArticles = await getAllArticles(serialize);
+
   return {
     props: {
-      allArticles, 
-    }
-  }
-}
+      allArticles,
+    },
+  };
+};

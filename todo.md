@@ -26,4 +26,10 @@
 
 11- remove the shadow from the button
 
+12- fix the layout of the article card on the homepage in the articles section. 
+
+13- fix the styles for the paragraph component
+
 - think about adding dark mode. 
+
+MOST IMPORTANT: FIX THE Z-INDEX PROBLEMS FOR BUTTONS AND NAVBAR; 

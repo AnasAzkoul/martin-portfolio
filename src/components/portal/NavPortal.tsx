@@ -1,24 +1,31 @@
-import React, {useContext} from 'react';
-import Portal from '.';
-import { uiContext } from '@/context/UIContext';
+import React from 'react'; 
 
-interface Props {
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '.';
+
+type Props = {}
+
+const NavPortal = (props: Props) => {
+  return (
+    <Dialog>
+      <DialogTrigger>Open</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Are you sure absolutely sure?</DialogTitle>
+          <DialogDescription>
+            This action cannot be undone. This will permanently delete your
+            account and remove your data from our servers.
+          </DialogDescription>
+        </DialogHeader>
+      </DialogContent>
+    </Dialog>
+  );
 }
 
-
-const NavigationPortal = ({}: Props) => {
-  const {isSidebarOpen} = useContext(uiContext); 
-
-  return (
-    <>    
-      {isSidebarOpen && (        
-        <Portal wrapperID='react-portal-modal-navigation'>
-          <div className='fixed inset-0 z-30 bg-gray-500/50'>
-          </div>
-        </Portal>
-        )}
-    </>
-  );
-};
-
-export default NavigationPortal;
+export default NavPortal

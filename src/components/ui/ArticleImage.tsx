@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 type Props = {
   src: string
-  
 }
 
 const ArticleImage = ({src}: Props) => {

@@ -25,6 +25,8 @@
   @apply w-full; 
 }
 
+
+
 .sidebar {
   @apply absolute top-0 z-50 h-screen w-screen flex flex-col items-center bg-primary transition-all ease-in duration-300
 }
