@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { forwardRef } from 'react';
 
-type Props = {
-  children: React.ReactNode
-  pProps?: React.HTMLProps<HTMLParagraphElement>
+interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
+  children: React.ReactNode;
 }
 
-const Paragraph: React.FC<Props> = ({children, pProps}: Props) => {
-  return (
-    <p
-      {...pProps!}
-      className={`text-base text-gray-500 font-montserrat my-6 tracking-normal leading-6 ${pProps?.className}`}
-    >
-      {children}
-      </p>  
-  )
-}
+const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <p
+        {...props}
+        className={`text-base text-gray-500 font-montserrat my-2 tracking-normal leading-6 ${className}`}
+      >
+        {children}
+      </p>
+    );
+  }
+);
 
-export default Paragraph
+Paragraph.displayName = 'Paragraph';
+
+export default Paragraph;

@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { forwardRef } from 'react';
 
-type Props = {
-  children: React.ReactNode
+interface SectionTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
+  children: React.ReactNode;
 }
 
-const SectionTitle = ({children}: Props) => {
-  return (
-    <h2 className='text-3xl text-secondary font-semibold uppercase'>{children}</h2>
-  )
-}
+const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
+  ({ children, className }, ref) => {
+    return (
+      <h2
+        className={`font-bold text-2xl text-secondary  uppercase ${className}`}
+      >
+        {children}
+      </h2>
+    );
+  }
+);
 
-export default SectionTitle
+SectionTitle.displayName = 'SectionTitle';
+
+export default SectionTitle;

@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout/Layout';
 import HeroSection from '@/components/hero/HeroSection';
-import Articles from '@/components/Articles/ArticlesList';
+import Articles from '@/components/Articles';
 import Publications from '@/components/publications/Publications';
 import { getAllArticles } from '@/lib/helpers/getArticles';
 import { serialize } from 'next-mdx-remote/serialize';
