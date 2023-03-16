@@ -1,18 +1,18 @@
-import React from 'react';
-import PageSection from '../ui/PageSection';
-import Paragraph from '../ui/paragraph';
-import SectionTitle from '../ui/SectionTitle';
-import { publicationsData } from '@/utils/constants';
-import { CgChevronRight } from 'react-icons/cg';
-import styles from './publications.module.css';
+import React from "react";
+import PageSection from "../ui/PageSection";
+import Paragraph from "../ui/paragraph";
+import SectionTitle from "../ui/SectionTitle";
+import { publicationsData } from "@/utils/constants";
+import { CgChevronRight } from "react-icons/cg";
+import styles from "./publications.module.css";
 
 type Props = {};
 
 const Publications = (props: Props) => {
   return (
-    <PageSection id='publications'>
+    <PageSection id="publications">
       <SectionTitle>My Publications</SectionTitle>
-      <div className='md:w-8/12'>
+      <div className="md:w-8/12">
         <Paragraph>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           aspernatur accusamus nemo molestias fuga et at quae mollitia provident
@@ -23,12 +23,12 @@ const Publications = (props: Props) => {
         {publicationsData.map((item) => {
           return (
             <li key={item.id} className={styles.publication}>
-              <CgChevronRight className='text-inherit' size={20} />
+              <CgChevronRight className="text-inherit" size={20} />
               <a
                 href={item.href}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='ml-4 text-inherit'
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-4 text-inherit"
               >
                 {item.title}
               </a>

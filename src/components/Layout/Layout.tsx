@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Navbar from '../header';
+import React from "react";
+import Head from "next/head";
+import Navbar from "../header";
 
 type Props = {
   children: React.ReactNode;
@@ -12,12 +12,12 @@ const Layout = ({ children }: Props) => {
       <Head>
         <title>Martin Drozdik</title>
         <meta
-          name='description'
-          content='Martin Drozdik is a freelance software developer and researcher based in Vienna.'
+          name="description"
+          content="Martin Drozdik is a freelance software developer and researcher based in Vienna."
         />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <main className='relative overflow-x-hidden bg-primary'>
+      <main className="relative overflow-x-hidden bg-primary">
         <Navbar />
         {children}
       </main>

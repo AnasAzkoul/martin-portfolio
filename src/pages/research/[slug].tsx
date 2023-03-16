@@ -14,7 +14,7 @@ import { useScrollProgressBar } from '@/lib/hooks/useScrollProgressbar';
 import styles from '../../styles/Research.module.css';
 import Image from 'next/image';
 import ArticleImage from '@/components/ui/ArticleImage';
-import NextArticleLink from '@/components/ui/NextArticleLink';
+import NextArticleLink from '@/components/ui/ArticleLinkButton';
 
 
 

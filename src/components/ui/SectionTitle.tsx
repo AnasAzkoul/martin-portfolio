@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef } from "react";
 
 interface SectionTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
@@ -16,6 +16,6 @@ const SectionTitle = forwardRef<HTMLHeadingElement, SectionTitleProps>(
   }
 );
 
-SectionTitle.displayName = 'SectionTitle';
+SectionTitle.displayName = "SectionTitle";
 
 export default SectionTitle;

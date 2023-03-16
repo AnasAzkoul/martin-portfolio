@@ -1,20 +1,18 @@
-
 .social_links_container {
-  @apply mt-16 mb-10
+  @apply mt-16 mb-10;
 }
 
 .arrow {
-  @apply ml-4 text-lg text-secondaryLight z-[-999]; 
+  @apply ml-4 text-lg text-secondaryLight z-[-999];
   /* animation: arrow 1.5s linear infinite; */
 }
-
 
 @keyframes arrow {
   0% {
     transform: translateX(0);
   }
-  
-  100%{
+
+  100% {
     transform: translateX(10px);
   }
 }

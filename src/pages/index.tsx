@@ -6,8 +6,6 @@ import { getAllArticles } from '@/lib/helpers/getArticles';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 
-
-
 type Article = {
   title: string;
   excerpt: string;

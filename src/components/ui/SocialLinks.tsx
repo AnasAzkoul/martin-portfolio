@@ -1,12 +1,11 @@
-import React from 'react';
-import {socialLinks} from '@/utils/constants';
-
+import React from "react";
+import { socialLinks } from "@/utils/constants";
 
 type Props = {
-  extraClasses?: string 
-}
+  extraClasses?: string;
+};
 
-const SocialLinksList = ({extraClasses}: Props) => {
+const SocialLinksList = ({ extraClasses }: Props) => {
   return (
     <ul className={`flex gap-10 cursor-pointer flex-wrap ${extraClasses}`}>
       {socialLinks.map((link) => {
@@ -14,6 +13,6 @@ const SocialLinksList = ({extraClasses}: Props) => {
       })}
     </ul>
   );
-}
+};
 
-export default SocialLinksList; 
+export default SocialLinksList;

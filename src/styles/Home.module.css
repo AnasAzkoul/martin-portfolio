@@ -1,24 +1,23 @@
 .container {
-  @apply mx-auto mt-28; 
+  @apply mx-auto mt-28;
   max-width: 83%;
 }
 
 .social_links_container {
-  @apply mt-16 mb-10
+  @apply mt-16 mb-10;
 }
 
 .arrow {
-  @apply ml-4 text-lg text-secondaryLight; 
+  @apply ml-4 text-lg text-secondaryLight;
   animation: arrow 1.5s linear infinite;
 }
-
 
 @keyframes arrow {
   0% {
     transform: translateX(0);
   }
-  
-  100%{
+
+  100% {
     transform: translateX(10px);
   }
 }

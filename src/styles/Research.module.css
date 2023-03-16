@@ -1,11 +1,11 @@
 .progress {
-  --progress: 0; 
+  --progress: 0;
   position: fixed;
   /* top: 4.5rem; */
   height: 5px;
   width: var(--progress);
-  background-color: #F6A801;
+  background-color: #f6a801;
   z-index: 50;
   /* margin-top: 4.5rem; */
-  @apply top-14 md:top-[4.5rem]
+  @apply top-14;
 }

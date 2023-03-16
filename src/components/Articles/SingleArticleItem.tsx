@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import Link from 'next/link';
-import Paragraph from '../ui/paragraph';
-import { MDXRemoteSerializeResult } from 'next-mdx-remote';
-import { AiOutlineLink } from 'react-icons/ai';
+import React, { useContext } from "react";
+import Link from "next/link";
+import Paragraph from "../ui/paragraph";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { AiOutlineLink } from "react-icons/ai";
 
 type Article = {
   title: string;
@@ -20,14 +20,11 @@ type Props = {
 
 const SingleArticleItem = ({ article }: Props) => {
   return (
-    <li
-      key={article.slug}
-      className='mb-10 space-y-3'
-    >
-      <h3 className='text-base font-bold capitalize text-secondaryLight'>
+    <li key={article.slug} className="mb-10 space-y-3">
+      <h3 className="text-base font-bold capitalize text-secondaryLight">
         {article.title}
       </h3>
-      <div className='space-y-2 md:w-8/12'>
+      <div className="space-y-2 md:w-8/12">
         <Paragraph>
           {article.excerpt}
           <br />
@@ -35,9 +32,9 @@ const SingleArticleItem = ({ article }: Props) => {
         <Link
           href={`/research/[slug]`}
           as={`/research/${article.slug}`}
-          className='text-sm text-indigo-700'
+          className="text-sm text-indigo-700"
         >
-          <AiOutlineLink className='inline mr-1' />
+          <AiOutlineLink className="inline mr-1" />
           read more...
         </Link>
       </div>

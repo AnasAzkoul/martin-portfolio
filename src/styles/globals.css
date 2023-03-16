@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,13 +8,12 @@
     scroll-behavior: smooth;
   }
   body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
   }
 }
 
 @layer components {
-
   .mobile-nav-toggle {
     @apply absolute text-2xl z-[1000] right-6 text-primary md:hidden;
   }
@@ -30,26 +29,40 @@
 
 @layer components {
   .social-link {
-    @apply hover:scale-150 transition-all duration-100 ease-in hover:text-secondaryLight text-xl text-gray-500;
+    @apply text-xl text-gray-500 transition-all duration-100 ease-in hover:scale-150 hover:text-secondaryLight;
   }
 
   .btn {
-    @apply z-10 relative text-center rounded-lg hover:-translate-y-px active:translate-y-px border;
+    @apply relative z-10 text-center border rounded-lg hover:-translate-y-px active:translate-y-px;
 
     @apply before:content-[""] before:absolute before:w-full before:h-full before:inset-0 before:scale-x-0 hover:before:scale-x-100 before:z-[-10] before:transition-all before:duration-200 before:ease-in before:origin-left before:rounded-md;
   }
 
   .btn-primary {
-
   }
 
   .btn-outline {
-    @apply border-secondaryLight bg-primary text-secondaryLight hover:text-primary before:bg-secondaryLight
+    @apply border-secondaryLight bg-primary text-secondaryLight hover:text-primary before:bg-secondaryLight;
   }
-
 }
 
 #canvas {
   width: 100%;
   height: auto;
+}
+
+.articleLink-btn {
+  @apply absolute flex justify-center h-12 w-12 text-base rounded-full bg-secondaryLight text-primary hover:w-auto;
+}
+
+.articleLink-btn span {
+  @apply flex items-center justify-center w-auto px-6
+}
+
+.articleLink-btn p {
+  @apply hidden;
+}
+
+.articleLink-btn:hover p {
+  @apply block px-2
 }

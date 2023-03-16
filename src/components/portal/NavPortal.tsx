@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from "react";
 
 import {
   Dialog,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '.';
+} from ".";
 
-type Props = {}
+type Props = {};
 
 const NavPortal = (props: Props) => {
   return (
@@ -26,6 +26,6 @@ const NavPortal = (props: Props) => {
       </DialogContent>
     </Dialog>
   );
-}
+};
 
-export default NavPortal
+export default NavPortal;

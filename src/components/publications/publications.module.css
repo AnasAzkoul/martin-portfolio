@@ -8,6 +8,6 @@
 }
 
 .publication {
-  @apply flex items-center py-4 hover:bg-secondaryLight hover:text-primary rounded-md transition-all duration-100 ease-linear;
+  @apply flex items-center py-4 transition-all duration-100 ease-linear rounded-md hover:bg-secondaryLight hover:text-primary;
   @apply text-sm text-gray-500;
 }

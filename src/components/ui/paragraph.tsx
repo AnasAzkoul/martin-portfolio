@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef } from "react";
 
 interface ParagraphProps extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
@@ -17,6 +17,6 @@ const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
   }
 );
 
-Paragraph.displayName = 'Paragraph';
+Paragraph.displayName = "Paragraph";
 
 export default Paragraph;
