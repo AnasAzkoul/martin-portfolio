@@ -39,6 +39,9 @@
   }
 
   .btn-primary {
+    @apply bg-secondaryLight text-primary border border-secondaryLight;
+
+    @apply before:bg-primary hover:text-secondaryLight;
   }
 
   .btn-outline {

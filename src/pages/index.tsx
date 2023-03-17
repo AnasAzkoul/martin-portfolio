@@ -2,6 +2,7 @@ import Layout from '@/components/Layout/Layout';
 import HeroSection from '@/components/hero/HeroSection';
 import Articles from '@/components/Articles';
 import Publications from '@/components/publications/Publications';
+import ContactMe from '@/components/Contact';
 import { getAllArticles } from '@/lib/helpers/getArticles';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
@@ -27,6 +28,7 @@ export default function Home({ allArticles }: Props) {
         <HeroSection />
         <Articles allArticles={allArticles} />
         <Publications />
+        <ContactMe />
       </Layout>
     </>
   );

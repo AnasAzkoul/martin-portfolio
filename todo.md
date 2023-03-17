@@ -1,5 +1,5 @@
 <!-- 1- add photos to the second article  -->
-    - make sure the order of the photos is correct according to the original article
+    <!-- - make sure the order of the photos is correct according to the original article -->
 
 <!-- 2- deal with the social links on different screen sizes
     - on mobile add to the bottom of the side nav
