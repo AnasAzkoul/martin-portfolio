@@ -83,14 +83,16 @@ export const workExperienceData = [
   {
     id: 1,
     companyName: "AskBe4",
-    title: "Software developer, Vienna, Austria, Backend development",
-    description: "",
+    title: "Software developer",
+    location: "Vienna, Austria",
+    description: "Backend development",
     date: "2016-2017",
   },
   {
     id: 2,
     companyName: "freelancer.com",
-    title: "freelance programmer, Vienna Austria",
+    title: "freelance programmer",
+    location: "Vienna, Austria",
     description:
       "Development of a floating license system (C++14/Qt 5/SSL) Single-handedly implemented a client-server system according to client’s specification.",
     date: "2016",
@@ -98,7 +100,8 @@ export const workExperienceData = [
   {
     id: 3,
     companyName: "OM Partners",
-    title: "Software developer, Antwerp, Belgium",
+    title: "Software developer",
+    location: "Antwerp, Belgium",
     description:
       "Developing and maintaining an advanced enterprise planning application. Key technologies: C++, Qt, SQL, Windows.",
     date: "2015-2016",
@@ -106,14 +109,16 @@ export const workExperienceData = [
   {
     id: 4,
     companyName: "Tanaka-Hernan-Akimoto laboratory",
-    title: "Doctoral Student, Nagano, Japan",
+    title: "Doctoral Student",
+    location: "Nagano, Japan",
     description: "Multi-objective optimization using evolutionary computation.",
     date: "2011-2015",
   },
   {
     id: 5,
     companyName: "Dolphin team",
-    title: "Researcher, Inaria, Lille, France",
+    title: "Researcher",
+    location: "Inaria, Lille, France",
     description:
       "Exploration of differential evolution parameters Key technologies: (C++/Qt).",
     date: "2013-2014",
@@ -121,7 +126,8 @@ export const workExperienceData = [
   {
     id: 6,
     companyName: "Accenture Technology Solutions",
-    title: "Programmer, Vienna, Austria",
+    title: "Programmer",
+    location: "Vienna, Austria",
     description:
       "Administered IBM mainframe jobs (JCL, ISPF, DB2, PL/I) and wrote technical documentation.",
     date: "2010-2011",

@@ -24,6 +24,7 @@ const WorkExperience = (props: Props) => {
                 description={exp.description}
                 companyName={exp.companyName}
                 date={exp.date}
+                location={exp.location}
                 key={exp.id}
               />
             );
