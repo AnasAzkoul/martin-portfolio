@@ -21,10 +21,21 @@ const HeroSection = (props: Props) => {
             A freelance software developer and researcher based in Vienna.
           </p>
           <Paragraph className="my-5">
-            I acquired my bachelor and master's degree in applied mathematics from Comenius University in Bratislava, Slovakia and continued to do my doctorate in engineering (computer science) from Shinshu University in Nagano, Japan.
+            I acquired my bachelor and master's degree in applied mathematics
+            from Comenius University in Bratislava, Slovakia and continued to do
+            my doctorate in engineering (computer science) from Shinshu
+            University in Nagano, Japan.
           </Paragraph>
         </div>
-        <Button variant="outlined">My Resume</Button>
+        <Button variant="outlined" className='mt-6'>
+          <a
+            href="/resume/Martin-Drozdik-CV-professional.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Resume
+          </a>
+        </Button>
         <div className={styles.social_links_container}>
           <SocialLinksList />
         </div>
