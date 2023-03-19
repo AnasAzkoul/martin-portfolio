@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout/Layout';
 import HeroSection from '@/components/hero/HeroSection';
 import Articles from '@/components/Articles';
+import WorkExperience from '@/components/work-exoerience';
 import Publications from '@/components/publications/Publications';
 import ContactMe from '@/components/Contact';
 import { getAllArticles } from '@/lib/helpers/getArticles';
@@ -27,6 +28,7 @@ export default function Home({ allArticles }: Props) {
       <Layout>
         <HeroSection />
         <Articles allArticles={allArticles} />
+        <WorkExperience />
         <Publications />
         <ContactMe />
       </Layout>

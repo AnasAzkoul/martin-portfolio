@@ -32,7 +32,7 @@ const SingleArticleItem = ({ article }: Props) => {
         <Link
           href={`/research/[slug]`}
           as={`/research/${article.slug}`}
-          className="text-sm text-indigo-700"
+          className="text-sm text-gray-700 hover:underline underline-offset-2"
         >
           <AiOutlineLink className="inline mr-1" />
           read more...
