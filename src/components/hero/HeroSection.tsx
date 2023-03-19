@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import PageSection from "../ui/PageSection";
 import Paragraph from "../ui/paragraph";
@@ -19,10 +20,8 @@ const HeroSection = (props: Props) => {
           <p className="text-lg font-semibold text-secondaryLight font-montserrat">
             A freelance software developer and researcher based in Vienna.
           </p>
-          <Paragraph className="my-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-            numquam quibusdam corrupti non quidem sit earum saepe nihil ratione
-            facilis!
+          <Paragraph className="my-5">
+            I acquired my bachelor and master's degree in applied mathematics from Comenius University in Bratislava, Slovakia and continued to do my doctorate in engineering (computer science) from Shinshu University in Nagano, Japan.
           </Paragraph>
         </div>
         <Button variant="outlined">My Resume</Button>
