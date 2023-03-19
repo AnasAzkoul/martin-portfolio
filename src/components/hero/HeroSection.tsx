@@ -8,6 +8,8 @@ import styles from "./HeroSection.module.css";
 
 type Props = {};
 
+
+
 const HeroSection = (props: Props) => {
   return (
     <PageSection id="home">

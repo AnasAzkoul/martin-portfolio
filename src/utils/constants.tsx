@@ -21,34 +21,39 @@ type SocialLinkTypes = {
   id: number;
   icon: JSX.Element;
   name: string;
+  link: string
 };
 
 export const socialLinks: SocialLinkTypes[] = [
   {
     id: 1,
     icon: <BsStackOverflow className="social-link" />,
+    link: "http://stackoverflow.com/users/1097451/martin-drozdik",
     name: "Stack Overflow",
   },
   {
     id: 2,
     icon: <IoLogoBitbucket className="social-link" />,
     name: "Bit Bucket",
+    link: "https://bitbucket.org/martin_drozdik",
   },
   {
     id: 3,
     icon: <SiResearchgate className="social-link" />,
     name: "Research Gate",
+    link: "https://www.researchgate.net/profile/Martin_Drozdik",
   },
   {
     id: 4,
     icon: <AiFillGithub className="social-link" />,
     name: "Github",
+    link: "https://github.com/martin-drozdik",
   },
-  {
-    id: 5,
-    icon: <AiOutlineLinkedin className="social-link" />,
-    name: "Linkedin",
-  },
+  // {
+  //   id: 5,
+  //   icon: <AiOutlineLinkedin className="social-link" />,
+  //   name: "Linkedin",
+  // },
 ];
 
 export const publicationsData = [

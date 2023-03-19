@@ -9,7 +9,11 @@ const SocialLinksList = ({ extraClasses }: Props) => {
   return (
     <ul className={`flex gap-10 cursor-pointer flex-wrap ${extraClasses}`}>
       {socialLinks.map((link) => {
-        return <li key={link.id}>{link.icon}</li>;
+        return <li key={link.id}>
+          <a href={link.link} target='_blank' rel='noreferrer'>
+            {link.icon}
+          </a>
+          </li>;
       })}
     </ul>
   );
