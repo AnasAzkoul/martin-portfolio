@@ -12,8 +12,9 @@ export type Link = {
 export const navLinks: Link[] = [
   { id: 1, text: "home", url: "/#home" },
   { id: 2, text: "research", url: "/#research" },
-  { id: 3, text: "publications", url: "/#publications" },
-  { id: 4, text: "contact", url: "/#contact" },
+  { id: 3, text: "experience", url: "/#experience" },
+  { id: 4, text: "publications", url: "/#publications" },
+  { id: 5, text: "contact", url: "/#contact" },
 ];
 
 type SocialLinkTypes = {
@@ -74,5 +75,55 @@ export const publicationsData = [
     title:
       "Comparison of Parameter Control Mechanisms in Multi-objective Differential Evolution",
     href: "/publications/Comparison of Parameter Control Mechanisms in Multi-objective Differential Evolution.pdf",
+  },
+];
+
+
+export const workExperienceData = [
+  {
+    id: 1,
+    companyName: "AskBe4",
+    title: "Software developer, Vienna, Austria, Backend development",
+    description: "",
+    date: "2016-2017",
+  },
+  {
+    id: 2,
+    companyName: "freelancer.com",
+    title: "freelance programmer, Vienna Austria",
+    description:
+      "Development of a floating license system (C++14/Qt 5/SSL) Single-handedly implemented a client-server system according to client’s specification.",
+    date: "2016",
+  },
+  {
+    id: 3,
+    companyName: "OM Partners",
+    title: "Software developer, Antwerp, Belgium",
+    description:
+      "Developing and maintaining an advanced enterprise planning application. Key technologies: C++, Qt, SQL, Windows.",
+    date: "2015-2016",
+  },
+  {
+    id: 4,
+    companyName: "Tanaka-Hernan-Akimoto laboratory",
+    title: "Doctoral Student, Nagano, Japan",
+    description: "Multi-objective optimization using evolutionary computation.",
+    date: "2011-2015",
+  },
+  {
+    id: 5,
+    companyName: "Dolphin team",
+    title: "Researcher, Inaria, Lille, France",
+    description:
+      "Exploration of differential evolution parameters Key technologies: (C++/Qt).",
+    date: "2013-2014",
+  },
+  {
+    id: 6,
+    companyName: "Accenture Technology Solutions",
+    title: "Programmer, Vienna, Austria",
+    description:
+      "Administered IBM mainframe jobs (JCL, ISPF, DB2, PL/I) and wrote technical documentation.",
+    date: "2010-2011",
   },
 ];
