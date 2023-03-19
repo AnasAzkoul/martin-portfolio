@@ -17,6 +17,7 @@ const DesktopNav = () => {
             >
               <Link
                 href={item.url}
+                scroll={false}
                 className="z-10 block w-full py-6 text-sm font-semibold md:text-primary md:py-3 md:px-6"
               >
                 {item.text}
