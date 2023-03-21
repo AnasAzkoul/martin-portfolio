@@ -23,13 +23,12 @@ const HeroSection = (props: Props) => {
             A freelance software developer and researcher based in Vienna.
           </p>
           <Paragraph className="my-5">
-            I acquired my bachelor and master's degree in applied mathematics
-            from Comenius University in Bratislava, Slovakia and continued to do
-            my doctorate in engineering (computer science) from Shinshu
-            University in Nagano, Japan.
+            Applied mathematics graduate from Comenius University, Slovakia.
+            Doctorate in engineering (computer science) from Shinshu University,
+            Japan.
           </Paragraph>
         </div>
-        <Button variant="outlined" className='mt-6'>
+        <Button variant="outlined" className="mt-6">
           <a
             href="/resume/Martin-Drozdik-CV-professional.pdf"
             target="_blank"
