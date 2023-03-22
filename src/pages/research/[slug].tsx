@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import ArticleLayout from "@/components/Articles/ArticleLayoutMDX";
 import Image from "next/image";
@@ -16,7 +17,6 @@ import {
   getNextAndPrevArticle,
   articlesFiles,
 } from "../../lib/helpers/getArticles";
-import {MergeComponents} from '@mdx-js/react/lib';
 
 type Props = {
   articleData: {
@@ -33,39 +33,49 @@ type Props = {
 };
 
 type Components = {
-  Canvas: typeof Canvas
-  ArticleImage: typeof ArticleImage
-  Image: typeof Image
-}
+  Canvas: typeof Canvas;
+  ArticleImage: typeof ArticleImage;
+  Image: typeof Image;
+};
 
-const components= { Canvas, Image }
+const components = { Canvas, Image };
 
 const ArticlePage = ({ articleData, nextPage, prevPage }: Props) => {
   const progressRef = useScrollProgressBar();
 
   return (
-    <Layout>
-      <div id="progress" className={styles.progress} ref={progressRef}></div>
-      <ArticleLayout title={articleData.title}>
-        <MDXRemote
-          {...articleData.mdxSource}
-          components={components}
-          lazy
-        />
-        <div className={`flex justify-between relative pt-4 px-4`}>
-          {prevPage && (
-            <ArticleLinkButton href={`/research/${prevPage}`} direction="left">
-              Prev
-            </ArticleLinkButton>
-          )}
-          {nextPage && (
-            <ArticleLinkButton href={`/research/${nextPage}`} direction="right">
-              Next
-            </ArticleLinkButton>
-          )}
-        </div>
-      </ArticleLayout>
-    </Layout>
+    <>
+      <Head>
+        <title>Martin Drozdik | {articleData.title}</title>
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={articleData.title} />
+        <meta property="og:description" content={articleData.excerpt} />
+      </Head>
+      <Layout>
+        <div id="progress" className={styles.progress} ref={progressRef}></div>
+        <ArticleLayout title={articleData.title}>
+          <MDXRemote {...articleData.mdxSource} components={components} lazy />
+          <div className={`flex justify-between relative pt-4 px-4`}>
+            {prevPage && (
+              <ArticleLinkButton
+                href={`/research/${prevPage}`}
+                direction="left"
+              >
+                Prev
+              </ArticleLinkButton>
+            )}
+            {nextPage && (
+              <ArticleLinkButton
+                href={`/research/${nextPage}`}
+                direction="right"
+              >
+                Next
+              </ArticleLinkButton>
+            )}
+          </div>
+        </ArticleLayout>
+      </Layout>
+    </>
   );
 };
 
