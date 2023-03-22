@@ -13,10 +13,9 @@ const Publications = (props: Props) => {
     <PageSection id="publications">
       <SectionTitle>My Publications</SectionTitle>
       <div className="md:w-8/12">
-        <Paragraph>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          aspernatur accusamus nemo molestias fuga et at quae mollitia provident
-          magni.
+        <Paragraph className='pb-4'>
+          Here is a list of my most recent publications, presented at different conferences such as
+          Intelligent optimization conference, Simulated Evolution and leaning conference 2014, and GECCO 2013 conference.
         </Paragraph>
       </div>
       <ul className={styles.publications}>
